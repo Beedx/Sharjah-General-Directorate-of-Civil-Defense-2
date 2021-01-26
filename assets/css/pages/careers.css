@@ -1,0 +1,42 @@
+/* 
+    -----------------------
+       # Type: Page
+       # Name: Careers
+    -----------------------
+*/
+.job-vacancies {
+    margin: 32px 0;
+}
+
+.job-vacancies .offer {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #DBE0E8;
+    margin-top: 25px;
+}
+
+.job-vacancies .offer a.primary-btn {
+    float: right;
+}
+
+.job-vacancies .offer .details h3 {
+    color: var(--dark-gray);
+    font: var(--med-b-size-semi-bold);
+    margin-bottom: 8px;
+}
+
+.job-vacancies .offer .details .type {
+    margin-right: 4px;
+}
+
+.job-vacancies .offer .details .location {
+    margin-left: 4px;
+}
+
+.job-vacancies .offer .details .meta {
+    color: var(--med-gray);
+}
+
+.job-vacancies .offer .details span {
+    color: var(--med-gray);
+    font: var(--small-size-med);
+}

@@ -1,0 +1,44 @@
+/* 
+    -----------------------
+       # Type: Component
+       # Name: Page Header
+    -----------------------
+*/
+.page-header {
+    background-color: var(--white);
+    display: block;
+}
+
+.page-header .page-breadcrumb {
+    background-color: #fff;
+    padding: 16px 0;
+}
+
+.page-header .page-breadcrumb,
+.page-header .page-breadcrumb a,
+.page-header .page-breadcrumb span {
+    color: var(--smooth-gray);
+    font: var(--small-size-med);
+    transition: color 0.2s;
+}
+
+.page-header .page-breadcrumb a:hover {
+    color: var(--med-gray);
+}
+
+.page-header .page-tools {
+    padding: 16px 0;
+}
+
+.page-header .page-tools .title {
+    font: var(--big-size-bold);
+    color: var(--dark-gray);
+    margin-bottom: 0;
+}
+
+.page-header .page-tools .title span {
+    color: #6D7179;
+    font: var(--small-size-reg);
+    font-size: 14px;
+    display: grid;
+}

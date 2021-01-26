@@ -1,0 +1,272 @@
+/* 
+    # Initialize styling the project
+    - Embed Fonts
+    + Define Variables:
+      - Colors
+      - Font Families & Sizes
+      - Repeated Values
+    - Define Constant Classes & IDs
+*/
+
+/* 
+    ++--- Embedded Fonts
+*/
+/* English Fonts */
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 100;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 200;
+    src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 300;
+    src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 400;
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+
+/* Arabic Fonts */
+@font-face {
+    font-family: 'Cairo';
+    font-weight: 300;
+    src: url(../fonts/Cairo-Bold.ttf);
+}
+
+/* 
+    ++--- Constants
+*/
+a {
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+input,
+button,
+textarea {
+    outline: none !important;
+}
+
+input,
+button {
+    border: none;
+    background: none;
+}
+
+menu {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1300px !important;
+    }
+}
+
+.overlay {
+    background-color: #000000CC;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+input[type=range] {
+    --range: calc(var(--max) - var(--min));
+    --ratio: calc((var(--value) - var(--min)) / var(--range));
+    --sx: calc(0.5 * 18px + var(--ratio) * (100% - 18px));
+
+    /* Inital Values */
+    --range-color: var(--range-color-one);
+    --thumb-width: 18px;
+    --thumb-height: 18px;
+    --radius: 50%;
+    --track-height: 18px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    width: var(--thumb-width);
+    height: var(--thumb-height);
+    border-radius: var(--radius);
+    background: var(--thumb-color);
+    border: none;
+    margin-top: calc(max((18px - 1px - 1px) * 0.5, 0px) - 2em * 0.5);
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, var(--range-color-one), var(--range-color-two)) 0/var(--sx) 100% no-repeat,
+        var(--track-color);
+    height: var(--track-height);
+}
+
+input[type=range]::-moz-range-thumb {
+    background: var(--range-color);
+    border: none;
+    width: var(--thumb-width);
+    height: var(--thumb-height);
+    border-radius: var(--radius);
+}
+
+input[type=range]::-moz-range-track {
+    border-radius: 0.5em;
+    background: var(--track-color);
+    box-shadow: none;
+    height: var(--track-height);
+}
+
+input[type=range]::-moz-range-thumb:hover {
+    background: var(--range-color);
+}
+
+input[type=range]::-moz-range-thumb:active {
+    background: var(--range-color);
+}
+
+input[type=range]::-moz-range-track {
+    background: linear-gradient(to right, var(--range-color-one), var(--range-color-two)) 0/var(--sx) 100% no-repeat, var(--track-color);
+}
+
+input[type=range]::-ms-fill-upper {
+    background: transparent;
+    border-color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: transparent;
+    border-color: transparent;
+}
+
+input[type=range]::-ms-thumb {
+    border-radius: 1em;
+    background: var(--range-color);
+    border: none;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
+input[type=range]::-ms-track {
+    background: var(--track-color);
+    box-shadow: none;
+    box-sizing: border-box;
+    height: var(--track-height);
+}
+
+input[type=range]::-ms-fill-lower {
+    border-radius: 0.5em 0 0 0.5em;
+    margin: -1px 0 -1px -1px;
+    background: var(--range-color);
+    border-right-width: 0;
+}
+
+a.primary-btn {
+    font: var(--small-size-med);
+    background-color: var(--main-green);
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 40px;
+    display: inline-block;
+}
+
+/* 
+    ++--- Variables
+*/
+:root {
+    /*
+      --------- 
+      # Colors
+      --------- 
+     */
+    --white: #fff;
+    --black: #000;
+    --main-green: #108240;
+    --secondary-green: #4D9754;
+    --dark-green: #045325;
+    --transparent-green: #128c391a;
+    --straight-gray: #707070;
+    --smooth-gray: #AEB1B6;
+    --lighter-gray: #F7F7F8;
+    --light-gray: #DFE4EB;
+    --soft-gray: #F4F5F7;
+    --hover-gray: #DBE0E8;
+    --med-gray: #687589;
+    --dark-gray: #353C4B;
+    --dark-blue: #232B38;
+    --darker-blue: #1E2531;
+    --darkest-blue: #171D27;
+    --accurate-gray: #4c4c4c;
+    --dark-text: #2F343E;
+    --darker-text: #313B4A;
+    --dark-red: #C1311B;
+    --caramel: #9F8256;
+
+    /*
+      --------- 
+      # Fonts
+      --------- 
+     */
+    --main-font-en: 'Poppins';
+    --main-font-ar: 'Cairo';
+    --standard-size: 24px;
+
+    /* Tiny Size */
+    --tiny-size-reg: 100 14px 'Poppins';
+    --tiny-size-med: 200 14px 'Poppins';
+    --tiny-size-semi-bold: 300 14px 'Poppins';
+    --tiny-size-bold: 400 14px 'Poppins';
+
+    /* Small Size */
+    --small-size-reg: 100 16px 'Poppins';
+    --small-size-med: 200 16px 'Poppins';
+    --small-size-semi-bold: 300 16px 'Poppins';
+    --small-size-bold: 400 16px 'Poppins';
+
+    /* Medium A Size */
+    --med-a-size-reg: 100 18px 'Poppins';
+    --med-a-size-med: 200 18px 'Poppins';
+    --med-a-size-semi-bold: 300 18px 'Poppins';
+    --med-a-size-bold: 400 18px 'Poppins';
+
+    /* Medium B Size */
+    --med-b-size-reg: 100 20px 'Poppins';
+    --med-b-size-med: 200 20px 'Poppins';
+    --med-b-size-semi-bold: 300 20px 'Poppins';
+    --med-b-size-bold: 400 20px 'Poppins';
+
+    /* Large A Size */
+    --large-a-size-reg: 100 22px 'Poppins';
+    --large-a-size-med: 200 22px 'Poppins';
+    --large-a-size-semi-bold: 300 22px 'Poppins';
+    --large-a-size-bold: 400 22px 'Poppins';
+
+    /* Large B Size */
+    --large-b-size-reg: 100 24px 'Poppins';
+    --large-b-size-med: 200 24px 'Poppins';
+    --large-b-size-semi-bold: 300 24px 'Poppins';
+    --large-b-size-bold: 400 24px 'Poppins';
+    
+    /* Big Size */
+    --big-size-reg: 100 34px 'Poppins';
+    --big-size-med: 200 34px 'Poppins';
+    --big-size-semi-bold: 300 34px 'Poppins';
+    --big-size-bold: 400 34px 'Poppins';
+}

@@ -1,0 +1,177 @@
+/* 
+    -----------------------
+       # Type: Component
+       # Name: Footer
+    -----------------------
+*/
+/* Chatbot */
+.chatbot {
+    background-color: #2B323C;
+    min-width: 64px;
+    height: 64px;
+    padding: 0 20px;
+    border-radius: 64px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.chatbot span {
+    font: var(--small-size-semi-bold);
+    color: #fff;
+    margin-right: 14px;
+    display: none;
+}
+
+.chatbot:hover span {
+    display: block;
+}
+
+footer .main {
+    background-color: var(--dark-blue);
+    padding: 45px 0;
+    position: relative;
+}
+
+footer .main .goUp {
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    cursor: pointer;
+    z-index: 9;
+}
+
+footer .main .data {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+footer .main .data:last-of-type {
+    margin-bottom: 0;
+}
+
+footer .main .data .text {
+    margin-left: 8px;
+}
+
+footer .main .data .text h4 {
+    font: var(--small-size-reg);
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0;
+}
+
+footer .main .data .text span {
+    color: #fff;
+    font: var(--med-a-size-semi-bold);
+}
+
+footer .main .quick-links .title {
+    color: #fff;
+    font: var(--large-b-size-bold);
+    position: relative;
+    line-height: 1;
+}
+
+footer .main .quick-links .title::after {
+    content: '';
+    position: absolute;
+    width: 54px;
+    background-color: #fff;
+    height: 2px;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -55px;
+}
+
+@media (min-width: 1400px) {
+    footer .main .quick-links .title::after {
+        width: 81px;
+    }
+}
+
+footer .main .quick-links ul li {
+    margin-bottom: 10px;
+}
+
+footer .main .quick-links ul li a {
+    color: #fff;
+    font: var(--small-size-med);
+    transition: all 0.2s;
+}
+
+footer .main .quick-links ul li a:hover {
+    color: var(--main-green);
+}
+
+footer .links-bar {
+    background-color: var(--darker-blue);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+footer .links-bar menu a {
+    color: #fff;
+    font: var(--small-size-med);
+    margin-right: 19px;
+    transition: all 0.2s;
+}
+
+footer .links-bar menu a:hover {
+    color: var(--main-green);
+}
+
+footer .links-bar menu a:last-of-type {
+    margin-right: 0;
+}
+
+footer .social-accounts {
+    display: inline-flex;
+    float: right;
+}
+
+footer .social-accounts a {
+    width: 44px;
+    height: 44px;
+    font-size: 21px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    margin-right: 9px;
+    transition: all 0.2s;
+}
+
+footer .social-accounts a:hover {
+    background-color: var(--darkest-blue);
+    color: #fff;
+}
+
+footer .social-accounts a:hover img.insta {
+    display: none;
+}
+
+footer .social-accounts a:hover img.insta-white {
+    display: block;
+}
+
+footer .social-accounts a img.insta-white {
+    display: none;
+}
+
+.copywrights-bar {
+    background-color: var(--darkest-blue);
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    height: 60px;
+    font: var(--tiny-size-med);
+}

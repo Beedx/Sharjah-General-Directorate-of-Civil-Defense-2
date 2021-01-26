@@ -1,0 +1,127 @@
+/* 
+    -----------------------
+       # Type: Component
+       # Name: Form
+    -----------------------
+*/
+.default-form {
+    padding: 64px 0;
+    background-color: #FCFCFC;
+}
+
+.default-form .head h4 {
+    font-size: 30px;
+    color: var(--dark-gray);
+    font-family: var(--main-font-en);
+    font-weight: 400;
+    letter-spacing: 1.62px;
+    margin-bottom: 16px;
+}
+
+.default-form .head span {
+    color: var(--dark-gray);
+    font: var(--med-a-size-reg);
+    letter-spacing: 0.97px;
+}
+
+.default-form form {
+    margin-top: 44px;
+}
+
+.default-form form .group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.default-form form .group input {
+    font-size: 18px;
+    padding: 10px 10px 10px 0;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--smooth-gray);
+    color: var(--dark-gray);
+    font: var(--small-size-med);
+}
+
+.default-form form .group label {
+    color: var(--dark-gray);
+    font: var(--small-size-med);
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.default-form form .group input:focus~label,
+.default-form form .group input:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: var(--main-green);
+}
+
+.default-form form .group .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.default-form form .group .bar:before,
+.default-form form .group .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: var(--main-green);
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.default-form form .group .bar:before {
+    left: 50%;
+}
+
+.default-form form .group .bar:after {
+    right: 50%;
+}
+
+.default-form form .group input:focus~.bar:before,
+.default-form form .group input:focus~.bar:after {
+    width: 50%;
+}
+
+.default-form form button#send-message {
+    background-color: var(--main-green);
+    color: #fff;
+    padding: 10px 70px;
+    border-radius: 30px;
+    font: var(--med-a-size-bold);
+    float: right;
+}
+
+.default-form form button.slim {
+    font: var(--small-size-med) !important;
+    padding: 12px 24px !important;
+}
+
+.default-form form .group .help-block {
+    position: absolute;
+    margin: 2px 0 0;
+    opacity: 0;
+    font-size: 13px;
+    font-family: var(--main-font-en);
+    font-weight: 100;
+    color: var(--med-gray);
+    bottom: -21px;
+    transition: all 0.2s;
+}
+
+.default-form form .group input:focus~.help-block,
+.default-form form .group input:valid~.help-block {
+    opacity: 1;
+}
