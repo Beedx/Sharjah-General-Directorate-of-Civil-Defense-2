@@ -6,7 +6,6 @@
 */
 .default-form {
     padding: 64px 0;
-    background-color: #FCFCFC;
 }
 
 .default-form .head h4 {
@@ -44,6 +43,10 @@
     font: var(--small-size-med);
 }
 
+.default-form form .group input[type="file"] {
+    display: none;
+}
+
 .default-form form .group label {
     color: var(--dark-gray);
     font: var(--small-size-med);
@@ -56,8 +59,9 @@
     -webkit-transition: 0.2s ease all;
 }
 
-.default-form form .group input:focus~label,
-.default-form form .group input:valid~label {
+.default-form form .group label.file-selected,
+.default-form form .group input:not([type="file"]):focus~label,
+.default-form form .group input:not([type="file"]):valid~label {
     top: -20px;
     font-size: 14px;
     color: var(--main-green);
@@ -124,4 +128,14 @@
 .default-form form .group input:focus~.help-block,
 .default-form form .group input:valid~.help-block {
     opacity: 1;
+}
+
+.default-form form .group button {
+    color: var(--dark-gray);
+    font: var(--tiny-size-bold);
+    text-decoration: underline;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }

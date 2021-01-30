@@ -57,6 +57,12 @@
     position: relative;
 }
 
+.accordion>.card .card-header~.collapse.show {
+    border-top: 2px solid var(--white);
+    margin-top: -2px;
+    position: relative;
+}
+
 .accordion>.card .card-body {
     padding: 16px 0 30px;
     font: var(--med-a-size-reg);
@@ -84,6 +90,7 @@
     display: flex;
     overflow: hidden;
     position: relative;
+    margin-bottom: 24px;
 }
 
 .list-of-logos .block .hover-effect {

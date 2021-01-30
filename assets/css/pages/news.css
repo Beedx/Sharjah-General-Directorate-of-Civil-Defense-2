@@ -4,6 +4,18 @@
        # Name: News
     -----------------------
 */
+/* News Page */
+.news-page {
+    background-color: var(--white);
+    padding: 20px 0;
+    margin-bottom: 100px;
+}
+
+.news-page .block {
+    margin-bottom: 50px;
+    display: none;
+}
+
 /* News Details */
 .page-header.news-details-header .page-tools .title {
     font-size: calc(var(--standard-size) * 2);

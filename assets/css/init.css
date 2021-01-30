@@ -182,9 +182,20 @@ a.primary-btn {
     font: var(--small-size-med);
     background-color: var(--main-green);
     color: #fff !important;
-    padding: 10px 20px;
+    padding: 9px 20px;
     border-radius: 40px;
     display: inline-block;
+    line-height: 2;
+}
+
+.load-more {
+    background-color: var(--main-green);
+    margin: 0 auto;
+    display: table;
+    padding: 10px 60px;
+    border-radius: 50px;
+    color: var(--white) !important;
+    font: var(--med-a-size-bold);
 }
 
 /* 
@@ -216,6 +227,8 @@ a.primary-btn {
     --accurate-gray: #4c4c4c;
     --dark-text: #2F343E;
     --darker-text: #313B4A;
+    --search-result: #2C2E34;
+    --marker: #FAE7B2;
     --dark-red: #C1311B;
     --caramel: #9F8256;
 

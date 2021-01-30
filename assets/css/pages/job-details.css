@@ -1,0 +1,12 @@
+.job-details h2 {
+    font: var(--large-b-size-semi-bold);
+    letter-spacing: 1.3px;
+    margin-bottom: 20px;
+    color: var(--dark-gray);
+}
+
+.job-details p {
+    font: var(--med-a-size-reg);
+    margin-bottom: 20px;
+    color: var(--dark-gray);
+}

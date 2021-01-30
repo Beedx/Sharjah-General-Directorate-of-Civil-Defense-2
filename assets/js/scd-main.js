@@ -363,6 +363,97 @@ $(document).ready(function () {
 
     /**
      * ---------------------
+     *   News
+     * ---------------------
+     */
+    // Load More Button in News
+    var itemsPerPage = parseInt($('.news.news-page').data('items-per-page'));
+    var shownItems = parseInt($('.news.news-page').data('shown-items'));
+
+    $(".news-page .block").slice(0, shownItems).show();
+    $(".load-more").on('click', function (e) {
+        e.preventDefault();
+        $(".news-page .block:hidden").slice(0, itemsPerPage).slideDown();
+        if ($(".news-page .block:hidden").length == 0) {
+            $(".load-more").fadeOut('slow');
+        }
+        // $('html,body').animate({
+        //   scrollTop: $(this).offset().top
+        // }, 1500);
+    });
+    
+    /**
+     * ---------------------
+     *   Events
+     * ---------------------
+     */
+    // Load More Button in News
+    var itemsPerPageEv = parseInt($('.events.events-page').data('items-per-page'));
+    var shownItemsEv = parseInt($('.events.events-page').data('shown-items'));
+
+    $(".events-page .block").slice(0, shownItemsEv).show();
+    $(".load-more").on('click', function (e) {
+        e.preventDefault();
+        $(".events-page .block:hidden").slice(0, itemsPerPageEv).slideDown();
+        if ($(".events-page .block:hidden").length == 0) {
+            $(".load-more").fadeOut('slow');
+        }
+        // $('html,body').animate({
+        //   scrollTop: $(this).offset().top
+        // }, 1500);
+    });
+
+    /**
+     * ---------------------
+     *   Job Application
+     * ---------------------
+     */
+    $('.default-form form .group input#cv').click(function(){
+        $(this).siblings('input[type="file"]').click();
+    });
+
+    $('.default-form form .group button').click(function(){
+        $(this).siblings('input[type="file"]').click();
+    });
+
+    $('.default-form form .group input[type="file"]').change(function(){
+        var inputVal = $(this).val().split("\\");
+        var filename = inputVal[inputVal.length - 1];
+        $(this).siblings('input#cv').val(filename);
+
+        if ($(this).val()) {
+            $(this).siblings('label').addClass('file-selected');
+        } else {
+            $(this).siblings('label').removeClass('file-selected');
+        }
+
+        console.log(inputVal);
+    });
+
+    $('.submit-application').click(function (e) {
+        $('.app-success').fadeIn(200);
+        $('body').css('overflow', 'hidden');
+        e.stopPropagation();
+    });
+
+    $('.app-success .window a').click(function () {
+        $(this).parents('.app-success').fadeOut(200);
+        $('body').css('overflow', 'auto');
+
+        return false;
+    });
+
+    $(window).click(function () {
+        $('.app-success').fadeOut(200);
+        $('body').css('overflow', 'auto');
+    });
+
+    $('.app-success .window').click(function (e) {
+        e.stopPropagation();
+    });
+
+    /**
+     * ---------------------
      *   Services Page
      * ---------------------
      */
@@ -399,5 +490,4 @@ $(document).ready(function () {
         }, 0);
         return false;
     });
-
 });
