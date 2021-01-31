@@ -57,6 +57,7 @@
     position: relative;
 }
 
+.accordion>.card .card-header~.collapsing,
 .accordion>.card .card-header~.collapse.show {
     border-top: 2px solid var(--white);
     margin-top: -2px;

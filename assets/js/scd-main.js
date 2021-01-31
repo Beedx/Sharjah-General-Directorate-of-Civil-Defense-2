@@ -78,25 +78,25 @@ $(document).ready(function () {
     });
 
     // Language Dropdown Menu
-    $('.tools-bar .tools .tool.lang > .t-btn').click(function () {
-        $(this).siblings('.lang-menu').slideDown(300);
-    });
+    // $('.tools-bar .tools .tool.lang > .t-btn').click(function () {
+    //     $(this).siblings('.lang-menu').slideDown(300);
+    // });
 
-    $('.tools-bar .tools .lang .lang-menu .t-btn').click(function () {
-        $(this).parent().slideUp(300);
-    });
+    // $('.tools-bar .tools .lang .lang-menu .t-btn').click(function () {
+    //     $(this).parent().slideUp(300);
+    // });
 
-    $('.tools-bar .tools .lang .lang-menu').click(function (e) {
-        e.stopPropagation();
-    });
+    // $('.tools-bar .tools .lang .lang-menu').click(function (e) {
+    //     e.stopPropagation();
+    // });
 
-    $('.tools-bar .tools .tool.lang > .t-btn').click(function (e) {
-        e.stopPropagation();
-    });
+    // $('.tools-bar .tools .tool.lang > .t-btn').click(function (e) {
+    //     e.stopPropagation();
+    // });
 
-    $(window).click(function () {
-        $('.tools-bar .tools .lang .lang-menu').slideUp(300);
-    });
+    // $(window).click(function () {
+    //     $('.tools-bar .tools .lang .lang-menu').slideUp(300);
+    // });
 
     // Search Form
     $('.tools-bar .tools .tool.search').click(function () {
@@ -457,37 +457,87 @@ $(document).ready(function () {
      *   Services Page
      * ---------------------
      */
-    var servicesTable = $('.services-table table').DataTable({
-        "lengthChange": false,
-        "info": false,
-        "paging": true,
-        "pageLength": 10,
-        "pagingType": "simple_numbers"
+    if ($('.services-table table').length) {
+        var servicesTable = $('.services-table table').DataTable({
+            "lengthChange": false,
+            "info": false,
+            "paging": true,
+            "pageLength": 10,
+            "pagingType": "simple_numbers"
+        });
+
+        $('.page-header .page-tools .search-for-services').on('submit', function (e) {
+            e.preventDefault();
+        });
+
+        $('.page-header .page-tools .search-for-services input').on('keyup', function () {
+            servicesTable.search(this.value).draw();
+        });
+
+        // var pages = Math.ceil((servicesTable.page.info().recordsTotal/servicesTable.page.len()));
+        $('.services-table .pagination .count small').text(servicesTable.page.info().pages);
+
+        $('.services-table .pagination .next').on('click', function () {
+            servicesTable.page('next').draw('page');
+            $('.services-table .pagination .count span').text(servicesTable.page.info().page + 1);
+            return false;
+        });
+
+        $('.services-table .pagination .prev').on('click', function () {
+            servicesTable.page('previous').draw('page');
+            $('.services-table .pagination .count span').text(servicesTable.page.info().page + 1);
+            $("html, body").animate({
+                scrollTop: $(document).height()
+            }, 0);
+            return false;
+        });
+    }
+
+    /**
+     * ---------------------
+     *   Forms
+     * ---------------------
+     */
+    $('.default-form form .group input, .default-form form .group textarea').keyup(function(){
+        var val = $(this).val();
+        var label = $(this).siblings('label');
+
+        if (val) {
+            label.addClass('typing');
+        } else {
+            label.removeClass('typing');
+        }
+    });
+    
+    $('.default-form form .group input, .default-form form .group textarea').focus(function(){
+        var label = $(this).parent();
+        var group = $(this).siblings('label');
+
+        group.addClass('typing');
+        label.addClass('typing');
+    });
+    
+    $('.default-form form .group input, .default-form form .group textarea').blur(function () {
+        var val = $(this).val();
+        var label = $(this).parent();
+        var group = $(this).siblings('label');
+
+        if (val) {
+            group.addClass('typing');
+            label.addClass('typing');
+        } else {
+            group.removeClass('typing');
+            label.removeClass('typing');
+        }
     });
 
-    $('.page-header .page-tools .search-for-services').on('submit', function (e) {
-        e.preventDefault();
-    });
+    $('.default-form form .group textarea[data-auto-height]').on('keyup keydown input focus blur', function (event) {
+        var val = $(this).val();
 
-    $('.page-header .page-tools .search-for-services input').on('keyup', function () {
-        servicesTable.search(this.value).draw();
-    });
-
-    // var pages = Math.ceil((servicesTable.page.info().recordsTotal/servicesTable.page.len()));
-    $('.services-table .pagination .count small').text(servicesTable.page.info().pages);
-
-    $('.services-table .pagination .next').on('click', function () {
-        servicesTable.page('next').draw('page');
-        $('.services-table .pagination .count span').text(servicesTable.page.info().page + 1);
-        return false;
-    });
-
-    $('.services-table .pagination .prev').on('click', function () {
-        servicesTable.page('previous').draw('page');
-        $('.services-table .pagination .count span').text(servicesTable.page.info().page + 1);
-        $("html, body").animate({
-            scrollTop: $(document).height()
-        }, 0);
-        return false;
+        if (!val) {
+            $(this).css('height', '46px');
+        } else {
+            $(this).css('height', 'auto').css('height', this.scrollHeight + (this.offsetHeight - this.clientHeight));
+        }
     });
 });

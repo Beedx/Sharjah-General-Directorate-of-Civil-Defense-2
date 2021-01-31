@@ -30,17 +30,28 @@
 .default-form form .group {
     position: relative;
     margin-bottom: 45px;
+    transition: all 0.2s;
 }
 
+.default-form form .group.typing {
+    margin-top: 65px;
+    margin-bottom: 70px;
+}
+
+.default-form form .group textarea,
 .default-form form .group input {
     font-size: 18px;
     padding: 10px 10px 10px 0;
     display: block;
+    height: 46px;
+    transition: all 0.2s;
     width: 100%;
     border: none;
     border-bottom: 1px solid var(--smooth-gray);
     color: var(--dark-gray);
     font: var(--small-size-med);
+    overflow: hidden;
+    resize: none;
 }
 
 .default-form form .group input[type="file"] {
@@ -60,6 +71,8 @@
 }
 
 .default-form form .group label.file-selected,
+.default-form form .group label.typing,
+.default-form form .group textarea:focus~label,
 .default-form form .group input:not([type="file"]):focus~label,
 .default-form form .group input:not([type="file"]):valid~label {
     top: -20px;
@@ -94,6 +107,8 @@
     right: 50%;
 }
 
+.default-form form .group textarea:focus~.bar:before,
+.default-form form .group textarea:focus~.bar:after,
 .default-form form .group input:focus~.bar:before,
 .default-form form .group input:focus~.bar:after {
     width: 50%;
@@ -125,6 +140,9 @@
     transition: all 0.2s;
 }
 
+.default-form form .group.typing input~.help-block,
+.default-form form .group textarea:focus~.help-block,
+.default-form form .group textarea:valid~.help-block,
 .default-form form .group input:focus~.help-block,
 .default-form form .group input:valid~.help-block {
     opacity: 1;

@@ -107,7 +107,7 @@
 
 .navigation-bar .links-bar .sub-menu {
     position: absolute;
-    z-index: 9;
+    z-index: 999;
     width: 100%;
     left: 0;
     top: 64px;
@@ -421,7 +421,7 @@
     width: 100%;
     height: 100%;
     top: 0;
-    z-index: 99;
+    z-index: 9999;
     display: none;
 }
 
@@ -452,10 +452,9 @@
 }
 
 .accessibility-settings .window .close-window i {
-    line-height: 16px;
-    font-size: 30px;
-    font-weight: bold;
-    margin-left: -0.5px;
+    line-height: 22px;
+    font-size: 21px;
+    margin-left: 1px;
 }
 
 .accessibility-settings .window .title {
@@ -622,7 +621,7 @@
     width: 100%;
     height: 100%;
     top: 0;
-    z-index: 99;
+    z-index: 9999;
     display: none;
 }
 
