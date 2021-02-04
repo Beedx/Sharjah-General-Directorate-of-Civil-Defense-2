@@ -77,6 +77,11 @@ $(document).ready(function () {
         $(this).parent().fadeOut(200);
     });
 
+    // Share links
+    $('.facebook-share').attr('href',$('.facebook-share').attr('href')+window.location.href);
+    $('.linkedin-share').attr('href',$('.linkedin-share').attr('href')+window.location.href);
+    $('.twitter-share').attr('href',$('.twitter-share').attr('href')+window.location.href);
+
     // Language Dropdown Menu
     // $('.tools-bar .tools .tool.lang > .t-btn').click(function () {
     //     $(this).siblings('.lang-menu').slideDown(300);
