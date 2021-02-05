@@ -242,6 +242,12 @@ a.primary-btn {
     --standard-size: 24px;
 
     /* Tiny Size */
+    --mobile-size-reg: 100 12px 'Poppins';
+    --mobile-size-med: 200 12px 'Poppins';
+    --mobile-size-semi-bold: 300 12px 'Poppins';
+    --mobile-size-bold: 400 12px 'Poppins';
+
+    /* Tiny Size */
     --tiny-size-reg: 100 14px 'Poppins';
     --tiny-size-med: 200 14px 'Poppins';
     --tiny-size-semi-bold: 300 14px 'Poppins';
@@ -276,7 +282,7 @@ a.primary-btn {
     --large-b-size-med: 200 24px 'Poppins';
     --large-b-size-semi-bold: 300 24px 'Poppins';
     --large-b-size-bold: 400 24px 'Poppins';
-    
+
     /* Big Size */
     --big-size-reg: 100 34px 'Poppins';
     --big-size-med: 200 34px 'Poppins';

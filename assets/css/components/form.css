@@ -157,3 +157,25 @@
     top: 50%;
     transform: translateY(-50%);
 }
+
+/* 
+    =================================================
+    ================= Responsive ====================
+    =================================================
+*/
+@media (max-width: 992px) {
+    .default-form .head h4 {
+        font: var(--med-b-size-bold);
+        letter-spacing: 0.92px;
+        margin-bottom: 0;
+    }
+
+    .default-form .head span {
+        font: var(--tiny-size-reg);
+    }
+
+    .default-form form button#send-message {
+        font: var(--tiny-size-semi-bold);
+        padding: 11px 24px;
+    }
+}

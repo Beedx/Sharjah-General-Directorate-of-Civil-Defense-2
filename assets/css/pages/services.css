@@ -44,10 +44,12 @@
 .services-table table td .services-details {
     background-color: var(--main-green);
     padding: 10px 16px;
-    border-radius: 25px;
+    border-radius: 49px;
     color: #fff;
     font: var(--small-size-med);
+    display: flow-root;
     transition: all 0.2s;
+    text-align: center;
 }
 
 .services-table table td .services-details:hover {
@@ -147,20 +149,69 @@ table.dataTable>thead .sorting_desc .wrapper:after {
     opacity: 1;
 }
 
-.page-header .page-tools {
-    display: flex;
-    justify-content: space-between;
+.service-details {
+    margin: 36px 0 66px;
 }
 
-.page-header .page-tools .button {
+.service-details .apply.button.mobile-only {
     padding: 11px 17px;
     border-radius: 50px;
     background-color: var(--main-green);
     color: var(--white);
-    font: var(--small-size-semi-bold);
+    font: var(--tiny-size-semi-bold);
     line-height: 29px;
+    display: none;
+    margin-top: 24px;
 }
 
-.service-details {
-    margin: 36px 0 66px;
+.services-links.for-mobile {
+    display: none;
+}
+
+/* 
+    =================================================
+    ================= Responsive ====================
+    =================================================
+*/
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .services-table table td .services-details:hover {
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .service-details {
+        margin: 15px 0 40px;
+    }
+
+    .service-details .apply.button.mobile-only {
+        display: inline-block;
+    }
+
+    .service-details-page .page-header .page-tools .button {
+        display: none;
+    }
+
+    .services-table {
+        margin-top: 0;
+    }
+
+    .services-table table {
+        display: none;
+    }
+
+    .services-links.for-mobile {
+        display: block;
+    }
+
+    .services-links.for-mobile a {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 0;
+        border-bottom: 1px solid var(--hover-gray);
+        font: var(--tiny-size-med);
+        color: var(--dark-gray);
+    }
 }

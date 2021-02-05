@@ -98,3 +98,50 @@
     background-color: var(--main-green);
     border-radius: 50px;
 }
+
+/* 
+    =================================================
+    ================= Responsive ====================
+    =================================================
+*/
+@media (max-width: 992px) {
+    .page-header .page-tools .title span {
+        font: var(--mobile-size-reg)
+    }
+
+    .job-vacancies .offer .details h3 {
+        font: var(--med-a-size-semi-bold);
+    }
+
+    .job-vacancies .offer .details span {
+        font: var(--tiny-size-med);
+    }
+
+    .job-vacancies .offer .details .meta .location img {
+        width: 13px;
+    }
+
+    .job-vacancies .offer a.primary-btn {
+        float: unset;
+        padding: 12px 16px;
+        font: var(--tiny-size-med);
+        margin-top: 16px;
+    }
+
+    .job-vacancies .offer a.primary-btn span {
+        display: none;
+    }
+
+    .app-success .window img {
+        margin-bottom: 8px;
+    }
+
+    .app-success .window h3 {
+        font: var(--med-a-size-semi-bold);
+    }
+    
+    .app-success .window p {
+        font: var(--tiny-size-reg);
+        margin-bottom: 24px;
+    }
+}

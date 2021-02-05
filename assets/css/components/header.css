@@ -35,6 +35,10 @@
     max-width: 50%;
 }
 
+.mobile-bar {
+    display: none;
+}
+
 /* 
     ++--- Naivigation Menu 
 */
@@ -44,6 +48,7 @@
 }
 
 .navigation-bar .close-btn,
+.navigation-bar .search-mobile,
 .navigation-bar .links-bar .sub-menu {
     display: none;
 }
@@ -252,10 +257,11 @@
 }
 
 .tools-bar .tools .tool.share .share-icons i.close-pop {
-    font-size: 34px;
-    margin-top: 0;
+    font-size: 20px;
+    margin-top: 5px;
     line-height: 18px;
     color: #484848;
+    margin-left: 4px;
 }
 
 /* Languages Dropdown Menu */
@@ -525,8 +531,7 @@
     transform: translateX(-50%);
     font-size: 14px;
     color: var(--main-green);
-    font-family: var(--main-font-en);
-    font-weight: 200;
+    font: var(--tiny-size-med);
 }
 
 .accessibility-settings .window .options-list .option .font-sizer input#font-sizer {
@@ -625,6 +630,10 @@
     display: none;
 }
 
+.happiness-meter .close-window {
+    display: none;
+}
+
 .happiness-meter .overlay .container>.row,
 .happiness-meter .overlay>.container {
     min-height: 100vh;
@@ -694,4 +703,311 @@
 
 .happiness-meter .window .percentage::after {
     content: '%';
+}
+
+/* 
+    =================================================
+    ================= Responsive ====================
+    =================================================
+*/
+
+@media (max-width: 992px) {
+
+    /* Logo Bar */
+    .logos-bar {
+        height: 60px;
+        padding: 0;
+    }
+
+    .logos-bar .row,
+    .logos-bar .container {
+        height: 60px;
+    }
+
+    .logos-bar img {
+        max-height: 31px !important;
+    }
+
+    .logos-bar a.uae-logo {
+        margin-right: 12px;
+    }
+
+    /* Navigation Bar */
+    .mobile-bar {
+        display: flex;
+        align-items: center;
+        height: 48px;
+        justify-content: space-between;
+        background-color: var(--main-green);
+        padding: 0 16px;
+    }
+
+    .mobile-bar.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        width: 100%;
+        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.13);
+    }
+
+    .mobile-bar .login-btn {
+        color: var(--main-green);
+        background-color: var(--white);
+        font: var(--mobile-size-med);
+        padding: 3px 12px;
+        border-radius: 30px;
+    }
+
+    .mobile-bar .open-navigation-menu {
+        margin-top: -4px;
+    }
+
+    .navigation-bar {
+        height: 100%;
+        width: 0%;
+        position: fixed;
+        z-index: 9999;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        background-color: var(--main-green);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .navigation-bar .container {
+        max-width: 100%;
+    }
+
+    .navigation-bar>* {
+        width: 100vw !important;
+    }
+
+    .navigation-bar .tools-bar {
+        background-color: unset;
+        position: absolute;
+        bottom: 0;
+        height: auto;
+        width: 100%;
+    }
+
+    .navigation-bar .tools-bar>.container .col-lg-4 {
+        position: absolute;
+        top: -56px !important;
+        top: 0;
+    }
+
+    .navigation-bar .tools-bar>.container .col-lg-5 {
+        padding: 0;
+        /* position: absolute; */
+        width: 100%;
+        /* bottom: 0; */
+    }
+
+    .navigation-bar .tools-bar .btns {
+        height: auto;
+    }
+
+    .navigation-bar .tools-bar .btns .button {
+        position: unset;
+        margin: 0;
+        border-radius: 0;
+        width: 50%;
+        text-align: center;
+        font: var(--mobile-size-med);
+    }
+
+    .navigation-bar .tools-bar .tools {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navigation-bar .links-bar {
+        height: auto;
+    }
+
+    .navigation-bar .links-bar .main-links {
+        display: block;
+        width: 100%;
+    }
+
+    .navigation-bar .links-bar .container {
+        padding: 0;
+    }
+
+    .navigation-bar .links-bar .main-links .nav-item {
+        display: block;
+        width: 100%;
+        padding: 8px 16px;
+    }
+
+    .navigation-bar .links-bar .sub-menu .sub-items {
+        padding: 5px 30px 13px;
+    }
+
+    .navigation-bar .search-mobile {
+        background-color: var(--soft-gray);
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 29px;
+        margin-bottom: 12px;
+    }
+
+    .navigation-bar .search-mobile input {
+        width: -webkit-fill-available;
+        font: var(--tiny-size-reg);
+        color: var(--dark-gray);
+    }
+
+    .navigation-bar .search-mobile input::placeholder {
+        color: var(--dark-gray);
+    }
+
+    .tools-bar .tools .tool.search {
+        display: none;
+    }
+
+    .tools-bar .tools .tool.lang .t-btn:hover,
+    .tools-bar .tools .tool.lang .t-btn.active,
+    .tools-bar .tools .tool:not(.lang):hover {
+        background-color: #0f6132;
+    }
+
+    .tools-bar .tools .tool>a img,
+    .tools-bar .tools .tool>img {
+        filter: invert(1) brightness(1.5);
+    }
+
+    .tools-bar .tools .lang span {
+        color: var(--white);
+    }
+
+    .tools-bar .tools .tool.share .share-icons {
+        right: unset;
+        border-radius: 22px;
+        transform: rotate(90deg) translate(-50%);
+        bottom: -22px;
+    }
+
+    .tools-bar .tools .tool.share .share-icons img {
+        transform: rotate(-90deg);
+    }
+
+    .tools-bar .tools .tool.share .share-icons i.close-pop {
+        margin-left: 9px;
+    }
+
+    .accessibility-settings .window {
+        background-color: var(--white);
+        border-radius: 0;
+        padding: 40px;
+        margin: 0;
+        height: 100vh;
+    }
+
+    .accessibility-settings .col-lg-6 {
+        padding: 0;
+    }
+
+    .accessibility-settings .window .options-list .option .option-name {
+        font: var(--tiny-size-semi-bold);
+    }
+
+    .accessibility-settings .window .options-list .option .color-changer .color {
+        width: 22px;
+        height: 22px;
+        font-size: 11px;
+    }
+
+    .accessibility-settings .window .options-list .option .font-sizer .range-wrap output {
+        font: var(--mobile-size-med);
+    }
+
+    .accessibility-settings .window .options-list .option .print-page .print-doc,
+    .accessibility-settings .window .options-list .option .switch .disabled {
+        margin-left: -9px;
+    }
+
+    .accessibility-settings .window .options-list .option .switch span {
+        margin-right: 0;
+    }
+
+    .accessibility-settings .window .options-list .option .print-page .print-doc svg,
+    .accessibility-settings .window .options-list .option .switch svg {
+        height: 26px;
+    }
+
+    .accessibility-settings .window .action-btns {
+        margin-top: 0;
+        position: absolute;
+        right: 24px;
+        bottom: 24px;
+    }
+
+    .accessibility-settings .window .action-btns .ab {
+        font: var(--mobile-size-semi-bold);
+        padding: 10px 24px;
+    }
+
+    .accessibility-settings .window .close-window {
+        color: var(--dark-gray);
+        top: 43px;
+        right: 20px;
+        border: none;
+    }
+
+    .happiness-meter .overlay {
+        background-color: #E7E9EB;
+    }
+
+    .happiness-meter .close-window {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 20px;
+        border-radius: 50%;
+        justify-content: center;
+        color: var(--dark-gray);
+    }
+
+    .happiness-meter .window .banner {
+        padding: 35px;
+    }
+
+    .happiness-meter .window .banner h3 {
+        font: var(--tiny-size-reg);
+        line-height: 24px;
+        margin-bottom: 25px;
+    }
+
+    .happiness-meter .window .banner .h {
+        width: 147px;
+        right: 25px;
+    }
+
+    .happiness-meter .window .range-meter {
+        padding: 20px 27px;
+    }
+
+    .happiness-meter .window .ruler {
+        font: var(--mobile-size-reg);
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .tools-bar .btns .button {
+        display: flex;
+    }
+}
+
+@media (max-width: 382px) {
+    .tools-bar .btns .button {
+        padding: 15px 10px;
+    }
+
+    .navigation-bar .tools-bar .btns .button {
+        font-size: 10px !important;
+    }
 }

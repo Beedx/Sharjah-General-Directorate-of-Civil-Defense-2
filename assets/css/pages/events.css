@@ -114,3 +114,54 @@
     margin-bottom: 24px;
     margin-top: -66px;
 }
+
+/* 
+    =================================================
+    ================= Responsive ====================
+    =================================================
+*/
+
+@media (max-width: 992px) {
+    .events .block .event {
+        height: 303px;
+    }
+    
+    .events .block .event .icon img {
+        width: 24px;
+    }
+    
+    .event-details .block .event {
+        height: 303px;
+        margin: 16px 0;
+    }
+
+    .events .block .event .icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .event-details .block .event .icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .event-details .block .event .icon img {
+        width: 24px;
+    }
+
+    .event-details .block .event h3 {
+        font: var(--med-b-size-semi-bold);
+    }
+
+    .event-details .block .event .date {
+        font: var(--med-a-size-bold);
+    }
+
+    .event-details .block .event .time span {
+        font: var(--tiny-size-med);
+    }
+
+    .event-details .block .event .time small {
+        font: var(--mobile-size-reg);
+    }
+}

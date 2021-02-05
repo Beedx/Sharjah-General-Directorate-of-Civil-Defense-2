@@ -30,6 +30,10 @@
     display: block;
 }
 
+footer {
+    position: relative;
+}
+
 footer .main {
     background-color: var(--dark-blue);
     padding: 45px 0;
@@ -114,7 +118,6 @@ footer .links-bar {
     height: 80px;
     display: flex;
     align-items: center;
-    height: 80px;
 }
 
 footer .links-bar menu a {
@@ -175,4 +178,147 @@ footer .social-accounts a img.insta-white {
     color: rgba(255, 255, 255, 0.5);
     height: 60px;
     font: var(--tiny-size-med);
+}
+
+/* 
+    =================================================
+    ================= Responsive ====================
+    =================================================
+*/
+@media (min-width: 992px) and (max-width: 1200px) {
+    footer .main .quick-links .title {
+        font: var(--med-b-size-bold);
+    }
+
+    footer .main .data .text h4 {
+        font: var(--tiny-size-reg);
+    }
+
+    footer .main .data .text span {
+        font: var(--small-size-semi-bold);
+    }
+
+    footer .main .quick-links .title::after {
+        display: none;
+    }
+
+    .copywrights-bar .col-lg-4 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    footer .links-bar .col-lg-6 {
+        -ms-flex: 0 0 58.333333%;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .chatbot {
+        min-width: 32px;
+        height: 32px;
+        padding: 0 8px;
+        bottom: 27px;
+    }
+
+    .chatbot span {
+        font: var(--small-size-med);
+        font-size: 13px;
+    }
+
+    .chatbot img {
+        width: 15px;
+    }
+
+    footer .main,
+    footer .main .quick-links,
+    footer .main .goUp,
+    footer .main>.container>.row>.col-lg-3 {
+        transform: scale(1, -1);
+    }
+
+    footer .main .goUp {
+        top: -197px;
+        z-index: 9999 !important;
+    }
+
+    footer .main .goUp img {
+        width: 32px;
+        height: 32px;
+    }
+
+    footer .main .quick-links ul {
+        margin-bottom: 0;
+    }
+
+    footer .main .quick-links .title {
+        font: var(--med-b-size-bold);
+        display: flex;
+        align-items: center;
+        margin-bottom: 17px;
+    }
+
+    footer .main .quick-links .title::after {
+        width: 23px;
+        position: unset;
+        margin-left: 8px;
+    }
+
+    footer .main .data {
+        margin-bottom: 0;
+        margin-top: 16px;
+    }
+
+    footer .main .data img {
+        width: 32px;
+        height: 32px;
+    }
+
+    footer .main .data .text h4 {
+        font: var(--tiny-size-reg);
+    }
+
+    footer .main .data .text span {
+        font: var(--small-size-semi-bold);
+    }
+
+    footer .links-bar {
+        height: auto;
+        padding: 24px 0;
+    }
+
+    footer .links-bar .col-lg-3 {
+        width: auto !important;
+    }
+
+    footer .links-bar menu a {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+        font: var(--tiny-size-med);
+    }
+
+    footer .social-accounts a {
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+    }
+
+    footer .social-accounts a img {
+        width: 15px;
+    }
+
+    footer .social-accounts {
+        display: inline-flex;
+        float: left;
+        margin-top: 17px;
+    }
+
+    .copywrights-bar {
+        height: 40px;
+        font: var(--mobile-size-med);
+    }
 }

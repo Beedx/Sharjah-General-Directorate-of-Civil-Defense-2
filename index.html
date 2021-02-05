@@ -34,12 +34,12 @@
 	<div class="logos-bar">
 		<div class="container">
 			<div class="row justify-content-between align-items-center">
-				<div class="col-md-4">
+				<div class="col-lg-4 col-5">
 					<a href="index.html" class="scd-logo">
 						<img src="assets/img/Header/SCD-Logo.png" alt="Sharjah General Directorate of Civil Defense">
 					</a>
 				</div>
-				<div class="col-md-5 d-flex justify-content-end">
+				<div class="col-lg-5 col-7 d-flex justify-content-end">
 					<a href="https://u.ae/" class="uae-logo" target="_blank">
 						<img src="assets/img/Header/UAE-Logo.png"
 							alt="The official portal of the United Arab Emirates government">
@@ -52,14 +52,34 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="mobile-bar">
+		<a href="#" class="open-navigation-menu">
+			<img src="assets/icons/Header/menu-bars.svg" alt="Menu">
+		</a>
+
+		<!-- <a href="#" class="login-btn">Login</a> -->
+	</div>
 	
 	<!-- 
 		+++---- # Navigation Bar
 	-->
 	<div class="navigation-bar">
-	
-		<!-- Close Button -->
-		<a href="#" class="close-btn">&times;</a>
+		<div class="mobile-bar">
+			<a href="#" class="close-navigation-menu">
+				<img src="assets/icons/Header/Close-Icon.svg" alt="Close">
+			</a>
+		
+			<!-- <a href="#" class="login-btn">Login</a> -->
+		</div>
+
+		<!-- 
+			+------ # Search Mobile
+		 -->
+		<form action="search.html" class="search-mobile" method="get">
+			<input type="text" name="s" id="s" placeholder="What are you looking for?">
+			<button type="submit" id="get-result"><img src="assets/icons/Header/Search-Icon.svg" alt="Go"></button>
+		</form>
 	
 		<!-- 
 			+------ # Links Bar 
@@ -140,7 +160,7 @@
 		<div class="tools-bar">
 			<div class="container">
 				<div class="row justify-content-between">
-					<div class="col-md-5">
+					<div class="col-lg-5">
 						<div class="btns">
 							<a class="button emergency-btn" href="tel:997"><img src="assets/icons/Header/Call-Icon.svg"
 									alt="Call"> Emergency
@@ -151,29 +171,29 @@
 								Complaints</a>
 						</div>
 					</div>
-					<div class="col-md-4">
+					<div class="col-lg-4">
 						<div class="tools">
 							<div class="tool share">
 								<img src="assets/icons/Header/Share-Icon.svg" alt="Share">
 								<div class="label"><span>Share</span> <img src="assets/icons/Header/Share-Icon.svg"
 										alt="Share"></div>
 								<div class="share-icons">
-									<a class="facebook-share" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank">
+									<a href="https://www.facebook.com/sharer/sharer.php?u=#link" target="_blank">
 										<img src="assets/icons/Header/Facebook.svg" alt="FB">
 									</a>
-									<a class="instagram-share" href="#" target="_blank">
+									<a href="#" target="_blank">
 										<img src="assets/icons/Header/Instagram.svg" alt="In">
 									</a>
 									<a href="https://www.example.com/" target="_blank">
 										<img src="assets/icons/Header/Link.svg" alt="URL">
 									</a>
-									<a class="linkedin-share" href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank">
+									<a href="https://www.linkedin.com/sharing/share-offsite/?url=#link" target="_blank">
 										<img src="assets/icons/Header/Linkedin.svg" alt="Li">
 									</a>
-									<a class="twitter-share" href="https://twitter.com/intent/tweet?url=" target="_blank">
+									<a href="https://twitter.com/intent/tweet?text=#content" target="_blank">
 										<img src="assets/icons/Header/Twitter.svg" alt="Tw">
 									</a>
-									<i class="close-pop">&times;</i>
+									<i class="close-pop fas fa-times"></i>
 								</div>
 							</div>
 							<div class="tool lang">
@@ -217,7 +237,7 @@
 								alt="Go"></button>
 					</form>
 					<div class="row">
-						<div class="col-lg-3 col-md-4">
+						<div class="col-lg-3 col-lg-4">
 							<menu>
 								<h3>Quick Links</h3>
 								<ul>
@@ -227,7 +247,7 @@
 								</ul>
 							</menu>
 						</div>
-						<div class="col-lg-3 col-md-4">
+						<div class="col-lg-3 col-lg-4">
 							<menu>
 								<h3>Most Searched</h3>
 								<ul>
@@ -246,7 +266,7 @@
 				<div class="overlay">
 					<div class="container">
 						<div class="row justify-content-center align-content-center">
-							<div class="col-md-6">
+							<div class="col-lg-6">
 								<div class="window">
 									<button class="close-window"><i class="fas fa-times"></i></button>
 									<h3 class="title">Accessibility Settings</h3>
@@ -254,10 +274,10 @@
 									<div class="options-list">
 										<div class="option text-size">
 											<div class="row align-items-center">
-												<div class="col-md-4">
+												<div class="col-4">
 													<div class="option-name">Text Size</div>
 												</div>
-												<div class="col-md-8">
+												<div class="col-8">
 													<div class="font-sizer">
 														<span class="small">A</span>
 														<div class="range-wrap">
@@ -272,10 +292,10 @@
 										</div>
 										<div class="option colors">
 											<div class="row align-items-center">
-												<div class="col-md-4">
+												<div class="col-4">
 													<div class="option-name">Colors</div>
 												</div>
-												<div class="col-md-8">
+												<div class="col-8">
 													<div class="color-changer">
 														<div class="color black"></div>
 														<div class="color green active default">
@@ -289,10 +309,10 @@
 										</div>
 										<div class="option invert-colors">
 											<div class="row align-items-center">
-												<div class="col-md-4">
+												<div class="col-4">
 													<div class="option-name">Invert Colors</div>
 												</div>
-												<div class="col-md-8">
+												<div class="col-8">
 													<div class="colors-inverter switch">
 														<span class="disabled">
 															<svg xmlns="http://www.w3.org/2000/svg" width="36.542"
@@ -317,10 +337,10 @@
 										</div>
 										<div class="option listen">
 											<div class="row align-items-center">
-												<div class="col-md-4">
+												<div class="col-4">
 													<div class="option-name">Listen</div>
 												</div>
-												<div class="col-md-8">
+												<div class="col-8">
 													<div class="open-speaker switch">
 														<span class="disabled">
 															<svg xmlns="http://www.w3.org/2000/svg" width="40.939"
@@ -345,10 +365,10 @@
 										</div>
 										<div class="option print">
 											<div class="row align-items-center">
-												<div class="col-md-4">
+												<div class="col-4">
 													<div class="option-name">Print</div>
 												</div>
-												<div class="col-md-8">
+												<div class="col-8">
 													<div class="print-page">
 														<span class="print-doc">
 															<svg xmlns="http://www.w3.org/2000/svg" width="41.623"
@@ -378,14 +398,15 @@
 			<!-- Happiness Meter -->
 			<div class="happiness-meter">
 				<div class="overlay">
+					<button class="close-window"><i class="fas fa-times"></i></button>
 					<div class="container">
 						<div class="row justify-content-center align-content-center">
-							<div class="col-md-6">
+							<div class="col-lg-6 col-md-7 col-10">
 								<div class="window">
 									<div class="banner">
 										<img class="h" src="assets/img/Home/h.png" alt="Smile">
 										<div class="row">
-											<div class="col-md-6">
+											<div class="col-lg-6 col-7">
 												<h3>Please rate your overall experience with the website</h3>
 											</div>
 										</div>
@@ -427,12 +448,13 @@
 		<section>
 			<div class="single-slide">
 				<div class="row mx-0 align-items-center">
-					<div class="col-md-6">
+					<div class="col-lg-6 order-lg-first order-last">
 						<div class="img">
-							<img src="assets/img/Home/person.png" alt="Saif bin Zayed Al Nahyan">
+							<div class="thumb" style="background-image: url(assets/img/Home/person.png);"></div>
+							<!-- <img src="assets/img/Home/person.png" alt="Saif bin Zayed Al Nahyan"> -->
 						</div>
 					</div>
-					<div class="col-md-6">
+					<div class="col-lg-6 order-lg-last order-first">
 						<div class="slide-content">
 							<div class="title">Happiness Charter</div>
 							<div class="quote">
@@ -458,12 +480,13 @@
 			</div>
 			<div class="single-slide">
 				<div class="row mx-0 align-items-center">
-					<div class="col-md-6">
+					<div class="col-lg-6 order-lg-first order-last">
 						<div class="img">
-							<img src="assets/img/Home/112.png" alt="UAE Innovates">
+							<div class="thumb" style="background-image: url(assets/img/Home/112.png);"></div>
+							<!-- <img src="assets/img/Home/112.png" alt="UAE Innovates"> -->
 						</div>
 					</div>
-					<div class="col-md-6">
+					<div class="col-lg-6 order-lg-last order-first">
 						<div class="slide-content">
 							<div class="title">Innovation</div>
 							<div class="paragraph">
@@ -825,11 +848,11 @@
 	<div class="download-app">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-md-4">
+				<div class="col-lg-4">
 					<img class="app" src="assets/img/Home/Phone-Image.png" alt="App">
 				</div>
-				<div class="col-md-8">
-					<h3>Download Sharjah Civil Defence Mobile App</h3>
+				<div class="col-lg-8">
+					<h3><span>Download</span> Sharjah Civil Defence Mobile App</h3>
 					<p>Access the e services mobile application, available to download from google play store, apple
 						store and the Huawei app
 						gallery.</p>
@@ -863,10 +886,10 @@
 		<div class="container">
 			<div class="title-head">
 				<div class="row justify-content-between align-items-center no-gutters">
-					<div class="col-md-3">
+					<div class="col-lg-3">
 						<h3><span>We are</span> Here for you</h3>
 					</div>
-					<div class="col-md-9 d-flex justify-content-end">
+					<div class="col-lg-9 d-flex justify-content-end">
 						<div class="meta">
 							<img class="icon" src="assets/icons/Contact/Time-Icon.svg" alt="Time">
 							<div class="text">
@@ -894,7 +917,7 @@
 
 			<div class="addresses" id="maps">
 				<div class="row no-gutters">
-					<div class="col-md-4">
+					<div class="col-lg-4">
 						<div class="box">
 							<nav class="tabs">
 								<a href="#" class="tab active" data-menu="happiness-centres"><i
@@ -946,7 +969,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-8">
+					<div class="col-lg-8">
 						<div class="map">
 							<iframe
 								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.1427483853745!2d55.39907251501282!3d25.3665318838177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5a27bce9139f%3A0x455b50b33b7b1913!2sSharjah%20Fire%20Station%20Headquarters!5e0!3m2!1sen!2seg!4v1611161264178!5m2!1sen!2seg"
@@ -964,7 +987,7 @@
 		+ ------ # Partners
 		+----------------------------
 	-->
-	<div class="partners slider-block" id="partners-h">
+	<div class="partners slider-block remove-transform" id="partners-h">
 		<div class="container">
 			<div class="title-head">
 				<h3>
@@ -1091,7 +1114,7 @@
 
 			<div class="container">
 				<div class="row justify-content-between">
-					<div class="col-md-3">
+					<div class="col-lg-3">
 						<div class="data">
 							<img src="assets/icons/Footer/Visitor-Icon.svg" alt="Visitors">
 							<div class="text">
@@ -1108,13 +1131,13 @@
 						</div>
 					</div>
 
-					<div class="col-md-8">
+					<div class="col-lg-8">
 						<div class="quick-links">
 							<div class="row justify-content-end">
-								<div class="col-md-3 mr-xl-5">
+								<div class="col-lg-3 mr-xl-5">
 									<div class="title">Quick Links</div>
 								</div>
-								<div class="col-md-2">
+								<div class="col-lg-2">
 									<ul>
 										<li><a href="index.html">Home</a></li>
 										<li><a href="services.html">Services</a></li>
@@ -1122,7 +1145,7 @@
 										<li><a href="events.html">Events</a></li>
 									</ul>
 								</div>
-								<div class="col-md-3">
+								<div class="col-lg-3">
 									<ul>
 										<li><a href="open-data.html">Open Data</a></li>
 										<li><a href="open-data.html#policy">Open Data Policy</a></li>
@@ -1130,7 +1153,7 @@
 										<li><a href="about.html#our-strategy">Our Strategy</a></li>
 									</ul>
 								</div>
-								<div class="col-md-3">
+								<div class="col-lg-3">
 									<ul>
 										<li><a href="about.html#director-general-message">Director’s Message</a></li>
 										<li><a href="about.html#our-certifications">Excellence Corner</a></li>
@@ -1148,7 +1171,7 @@
 		<div class="links-bar">
 			<div class="container">
 				<div class="row justify-content-between align-items-center">
-					<div class="col-md-6">
+					<div class="col-lg-6">
 						<menu class="sub-menu">
 							<a href="#">Privacy Policy</a>
 							<a href="#">Terms and Conditions</a>
@@ -1157,7 +1180,7 @@
 						</menu>
 					</div>
 
-					<div class="col-md-3">
+					<div class="col-lg-3">
 						<div class="social-accounts">
 							<a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
 							<a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -1175,7 +1198,7 @@
 		<div class="copywrights-bar">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-lg-4">
 						<span>Copyrights — Sharjah Civil Defence - 2020</span>
 					</div>
 				</div>

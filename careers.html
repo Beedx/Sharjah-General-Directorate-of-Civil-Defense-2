@@ -20,7 +20,7 @@
     <link rel="shortcut icon" href="assets/img/Header/favicon.png" type="image/png">
 </head>
 
-<body>
+<body class="careers-page">
 
     <!-- 
 		+----------------------------
@@ -29,17 +29,17 @@
 	-->
 
     <!-- 
-        +------ # Logos Bar
-    -->
+    		+------ # Logos Bar
+    	-->
     <div class="logos-bar">
         <div class="container">
             <div class="row justify-content-between align-items-center">
-                <div class="col-md-4">
+                <div class="col-lg-4 col-5">
                     <a href="index.html" class="scd-logo">
                         <img src="assets/img/Header/SCD-Logo.png" alt="Sharjah General Directorate of Civil Defense">
                     </a>
                 </div>
-                <div class="col-md-5 d-flex justify-content-end">
+                <div class="col-lg-5 col-7 d-flex justify-content-end">
                     <a href="https://u.ae/" class="uae-logo" target="_blank">
                         <img src="assets/img/Header/UAE-Logo.png"
                             alt="The official portal of the United Arab Emirates government">
@@ -53,17 +53,37 @@
         </div>
     </div>
     
-    <!-- 
-        +++---- # Navigation Bar
-    -->
-    <div class="navigation-bar">
+    <div class="mobile-bar">
+        <a href="#" class="open-navigation-menu">
+            <img src="assets/icons/Header/menu-bars.svg" alt="Menu">
+        </a>
     
-        <!-- Close Button -->
-        <a href="#" class="close-btn">&times;</a>
+        <!-- <a href="#" class="login-btn">Login</a> -->
+    </div>
+    
+    <!-- 
+    		+++---- # Navigation Bar
+    	-->
+    <div class="navigation-bar">
+        <div class="mobile-bar">
+            <a href="#" class="close-navigation-menu">
+                <img src="assets/icons/Header/Close-Icon.svg" alt="Close">
+            </a>
+    
+            <!-- <a href="#" class="login-btn">Login</a> -->
+        </div>
     
         <!-- 
-                +------ # Links Bar 
-            -->
+    			+------ # Search Mobile
+    		 -->
+        <form action="search.html" class="search-mobile" method="get">
+            <input type="text" name="s" id="s" placeholder="What are you looking for?">
+            <button type="submit" id="get-result"><img src="assets/icons/Header/Search-Icon.svg" alt="Go"></button>
+        </form>
+    
+        <!-- 
+    			+------ # Links Bar 
+    		-->
         <div class="links-bar">
             <div class="container">
     
@@ -135,12 +155,12 @@
         </div>
     
         <!-- 
-                +------ # Tools Bar 
-            -->
+    			+------ # Tools Bar 
+    		-->
         <div class="tools-bar">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-md-5">
+                    <div class="col-lg-5">
                         <div class="btns">
                             <a class="button emergency-btn" href="tel:997"><img src="assets/icons/Header/Call-Icon.svg"
                                     alt="Call"> Emergency
@@ -151,14 +171,14 @@
                                 Complaints</a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
                         <div class="tools">
                             <div class="tool share">
                                 <img src="assets/icons/Header/Share-Icon.svg" alt="Share">
                                 <div class="label"><span>Share</span> <img src="assets/icons/Header/Share-Icon.svg"
                                         alt="Share"></div>
                                 <div class="share-icons">
-                                    <a class="facebook-share" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=#link" target="_blank">
                                         <img src="assets/icons/Header/Facebook.svg" alt="FB">
                                     </a>
                                     <a href="#" target="_blank">
@@ -167,13 +187,13 @@
                                     <a href="https://www.example.com/" target="_blank">
                                         <img src="assets/icons/Header/Link.svg" alt="URL">
                                     </a>
-                                    <a class="linkedin-share" href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank">
+                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=#link" target="_blank">
                                         <img src="assets/icons/Header/Linkedin.svg" alt="Li">
                                     </a>
-                                    <a class="twitter-share" href="https://twitter.com/intent/tweet?url=" target="_blank">
+                                    <a href="https://twitter.com/intent/tweet?text=#content" target="_blank">
                                         <img src="assets/icons/Header/Twitter.svg" alt="Tw">
                                     </a>
-                                    <i class="close-pop">&times;</i>
+                                    <i class="close-pop fas fa-times"></i>
                                 </div>
                             </div>
                             <div class="tool lang">
@@ -185,16 +205,16 @@
                                     </div>
                                 </a>
                                 <!-- <div class="lang-menu">
-                                    <div class="t-btn"><i class="fas fa-caret-down"></i> <span>عربي</span> <img
-                                            src="assets/icons/Header/Language-Icon.svg" alt="Language"></div>
-                                    <nav>
-                                        <a href="#" class="active">English</a>
-                                        <a href="#">عربي</a>
-                                        <a href="#">中文</a>
-                                        <a href="#">اُردُو</a>
-                                        <a href="#">فارسی</a>
-                                    </nav>
-                                </div> -->
+                                        <div class="t-btn"><i class="fas fa-caret-down"></i> <span>عربي</span> <img
+                                                src="assets/icons/Header/Language-Icon.svg" alt="Language"></div>
+                                        <nav>
+                                            <a href="#" class="active">English</a>
+                                            <a href="#">عربي</a>
+                                            <a href="#">中文</a>
+                                            <a href="#">اُردُو</a>
+                                            <a href="#">فارسی</a>
+                                        </nav>
+                                    </div> -->
                             </div>
                             <div class="tool happiness"><img src="assets/icons/Header/Happiness-Icon.png" alt="Happiness">
                             </div>
@@ -211,13 +231,13 @@
             <div class="search-pop">
                 <button class="close-search-pop"><i>&times;</i></button>
                 <div class="container">
-                    <form action="#" class="search-form">
+                    <form action="search.html" class="search-form">
                         <input type="text" name="s" id="s" placeholder="What are you looking for?">
                         <button type="submit" id="get-result"><img src="assets/icons/Home/arrow-forward.svg"
                                 alt="Go"></button>
                     </form>
                     <div class="row">
-                        <div class="col-lg-3 col-md-4">
+                        <div class="col-lg-3 col-lg-4">
                             <menu>
                                 <h3>Quick Links</h3>
                                 <ul>
@@ -227,7 +247,7 @@
                                 </ul>
                             </menu>
                         </div>
-                        <div class="col-lg-3 col-md-4">
+                        <div class="col-lg-3 col-lg-4">
                             <menu>
                                 <h3>Most Searched</h3>
                                 <ul>
@@ -246,7 +266,7 @@
                 <div class="overlay">
                     <div class="container">
                         <div class="row justify-content-center align-content-center">
-                            <div class="col-md-6">
+                            <div class="col-lg-6">
                                 <div class="window">
                                     <button class="close-window"><i class="fas fa-times"></i></button>
                                     <h3 class="title">Accessibility Settings</h3>
@@ -254,10 +274,10 @@
                                     <div class="options-list">
                                         <div class="option text-size">
                                             <div class="row align-items-center">
-                                                <div class="col-md-4">
+                                                <div class="col-4">
                                                     <div class="option-name">Text Size</div>
                                                 </div>
-                                                <div class="col-md-8">
+                                                <div class="col-8">
                                                     <div class="font-sizer">
                                                         <span class="small">A</span>
                                                         <div class="range-wrap">
@@ -272,10 +292,10 @@
                                         </div>
                                         <div class="option colors">
                                             <div class="row align-items-center">
-                                                <div class="col-md-4">
+                                                <div class="col-4">
                                                     <div class="option-name">Colors</div>
                                                 </div>
-                                                <div class="col-md-8">
+                                                <div class="col-8">
                                                     <div class="color-changer">
                                                         <div class="color black"></div>
                                                         <div class="color green active default">
@@ -289,10 +309,10 @@
                                         </div>
                                         <div class="option invert-colors">
                                             <div class="row align-items-center">
-                                                <div class="col-md-4">
+                                                <div class="col-4">
                                                     <div class="option-name">Invert Colors</div>
                                                 </div>
-                                                <div class="col-md-8">
+                                                <div class="col-8">
                                                     <div class="colors-inverter switch">
                                                         <span class="disabled">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="36.542"
@@ -317,10 +337,10 @@
                                         </div>
                                         <div class="option listen">
                                             <div class="row align-items-center">
-                                                <div class="col-md-4">
+                                                <div class="col-4">
                                                     <div class="option-name">Listen</div>
                                                 </div>
-                                                <div class="col-md-8">
+                                                <div class="col-8">
                                                     <div class="open-speaker switch">
                                                         <span class="disabled">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="40.939"
@@ -345,10 +365,10 @@
                                         </div>
                                         <div class="option print">
                                             <div class="row align-items-center">
-                                                <div class="col-md-4">
+                                                <div class="col-4">
                                                     <div class="option-name">Print</div>
                                                 </div>
-                                                <div class="col-md-8">
+                                                <div class="col-8">
                                                     <div class="print-page">
                                                         <span class="print-doc">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="41.623"
@@ -378,14 +398,15 @@
             <!-- Happiness Meter -->
             <div class="happiness-meter">
                 <div class="overlay">
+                    <button class="close-window"><i class="fas fa-times"></i></button>
                     <div class="container">
                         <div class="row justify-content-center align-content-center">
-                            <div class="col-md-6">
+                            <div class="col-lg-6 col-md-7 col-10">
                                 <div class="window">
                                     <div class="banner">
                                         <img class="h" src="assets/img/Home/h.png" alt="Smile">
                                         <div class="row">
-                                            <div class="col-md-6">
+                                            <div class="col-lg-6 col-7">
                                                 <h3>Please rate your overall experience with the website</h3>
                                             </div>
                                         </div>
@@ -436,7 +457,7 @@
         <div class="container">
             <div class="offer">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-md-5">
+                    <div class="col-lg-5">
                         <div class="details">
                             <h3>Customer Service Team Leader</h3>
                             <div class="meta">
@@ -444,14 +465,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <a href="job-details.html" class="primary-btn">Apply for this Job</a>
+                    <div class="col-lg-3">
+                        <a href="job-details.html" class="primary-btn">Apply<span> for this Job</span></a>
                     </div>
                 </div>
             </div>
             <div class="offer">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-md-5">
+                    <div class="col-lg-5">
                         <div class="details">
                             <h3>Experienced Firefighter</h3>
                             <div class="meta">
@@ -459,14 +480,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <a href="job-details.html" class="primary-btn">Apply for this Job</a>
+                    <div class="col-lg-3">
+                        <a href="job-details.html" class="primary-btn">Apply<span> for this Job</span></a>
                     </div>
                 </div>
             </div>
             <div class="offer">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-md-5">
+                    <div class="col-lg-5">
                         <div class="details">
                             <h3>Electrical Engineer</h3>
                             <div class="meta">
@@ -474,14 +495,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <a href="job-details.html" class="primary-btn">Apply for this Job</a>
+                    <div class="col-lg-3">
+                        <a href="job-details.html" class="primary-btn">Apply<span> for this Job</span></a>
                     </div>
                 </div>
             </div>
             <div class="offer">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-md-5">
+                    <div class="col-lg-5">
                         <div class="details">
                             <h3>Architect</h3>
                             <div class="meta">
@@ -489,8 +510,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <a href="job-details.html" class="primary-btn">Apply for this Job</a>
+                    <div class="col-lg-3">
+                        <a href="job-details.html" class="primary-btn">Apply<span> for this Job</span></a>
                     </div>
                 </div>
             </div>
@@ -517,7 +538,7 @@
 
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-md-3">
+                    <div class="col-lg-3">
                         <div class="data">
                             <img src="assets/icons/Footer/Visitor-Icon.svg" alt="Visitors">
                             <div class="text">
@@ -534,13 +555,13 @@
                         </div>
                     </div>
 
-                    <div class="col-md-8">
+                    <div class="col-lg-8">
                         <div class="quick-links">
                             <div class="row justify-content-end">
-                                <div class="col-md-3 mr-xl-5">
+                                <div class="col-lg-3 mr-xl-5">
                                     <div class="title">Quick Links</div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-lg-2">
                                     <ul>
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="services.html">Services</a></li>
@@ -548,7 +569,7 @@
                                         <li><a href="events.html">Events</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-lg-3">
                                     <ul>
                                         <li><a href="open-data.html">Open Data</a></li>
                                         <li><a href="open-data.html#policy">Open Data Policy</a></li>
@@ -556,7 +577,7 @@
                                         <li><a href="about.html#our-strategy">Our Strategy</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-lg-3">
                                     <ul>
                                         <li><a href="about.html#director-general-message">Director’s Message</a></li>
                                         <li><a href="about.html#our-certifications">Excellence Corner</a></li>
@@ -574,7 +595,7 @@
         <div class="links-bar">
             <div class="container">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-md-6">
+                    <div class="col-lg-6">
                         <menu class="sub-menu">
                             <a href="#">Privacy Policy</a>
                             <a href="#">Terms and Conditions</a>
@@ -583,7 +604,7 @@
                         </menu>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-lg-3">
                         <div class="social-accounts">
                             <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -601,7 +622,7 @@
         <div class="copywrights-bar">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
                         <span>Copyrights — Sharjah Civil Defence - 2020</span>
                     </div>
                 </div>
