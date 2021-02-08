@@ -622,7 +622,7 @@ $(document).ready(function () {
             $(items).removeClass('visible');
 
             $(items).slice((offset + (perPage * currentPage) - perPage), currentPage * perPage).show().css('display', 'flex').addClass('visible');
-            $(items+":not('.visible')").hide();
+            $(items + ":not('.visible')").hide();
 
             return currentPage;
 
@@ -638,9 +638,9 @@ $(document).ready(function () {
 
         var getAllPages = allPages('.services-links.for-mobile a', itemsNum);
         var pageNow = paginate('.services-links.for-mobile a', itemsNum);
-        
+
         $('.services-table .pagination .count small').text(allPages('.services-links.for-mobile a', itemsNum));
-        
+
         $('.services-table .pagination .next').on('click', function () {
             if (pageNow < getAllPages) {
                 pageNow = paginate('.services-links.for-mobile a', itemsNum, pageNow + 1);
@@ -707,4 +707,37 @@ $(document).ready(function () {
             $(this).css('height', 'auto').css('height', this.scrollHeight + (this.offsetHeight - this.clientHeight));
         }
     });
+
+    /**
+     * ---------------------
+     *   General
+     * ---------------------
+     */
+    function parse_query_string(query) {
+        var vars = query.split("&");
+        var query_string = {};
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            var key = decodeURIComponent(pair[0]).replace("?", "");
+            var value = decodeURIComponent(pair[1]);
+            // If first entry with this name
+            if (typeof query_string[key] === "undefined") {
+                query_string[key] = decodeURIComponent(value);
+                // If second entry with this name
+            } else if (typeof query_string[key] === "string") {
+                var arr = [query_string[key], decodeURIComponent(value)];
+                query_string[key] = arr;
+                // If third or later entry with this name
+            } else {
+                query_string[key].push(decodeURIComponent(value));
+            }
+        }
+        return query_string;
+    }
+
+    var params = parse_query_string(location.search);
+    console.log(params.tab);
+
+    $(`.${params.tab}`).find('button.collapsed').removeClass('collapsed');
+    $(`.${params.tab}`).find('div.collapse').addClass('show');
 });

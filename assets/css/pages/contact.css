@@ -7,3 +7,9 @@
 .contact-page .contact-form.default-form {
     background-color: #FCFCFC;
 }
+
+@media (max-width: 992px) {
+    .contact-page .contact-form.default-form {
+        background-color: var(--soft-gray);
+    }
+}

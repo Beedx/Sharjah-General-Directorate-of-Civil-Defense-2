@@ -155,13 +155,26 @@
     color: var(--darker-text);
     font: var(--small-size-bold);
 }
+
 /* 
     =================================================
     ================= Responsive ====================
     =================================================
 */
-@media (max-width: 992px) {
+@media (min-width: 1200px) and (max-width: 1400px) {
     .contact-page .contact-bar {
         padding: 0;
+    }
+
+    .contact-bar .addresses .box {
+        padding: 50px 25px;
+    }
+
+    .contact-bar .addresses .box nav a {
+        font: var(--tiny-size-med);
+    }
+    
+    .contact-bar .addresses .box .menu a.active {
+        font: var(--tiny-size-bold);
     }
 }

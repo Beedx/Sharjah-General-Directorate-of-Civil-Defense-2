@@ -49,6 +49,7 @@
     border: none;
     border-bottom: 1px solid var(--smooth-gray);
     color: var(--dark-gray);
+    background: none;
     font: var(--small-size-med);
     overflow: hidden;
     resize: none;

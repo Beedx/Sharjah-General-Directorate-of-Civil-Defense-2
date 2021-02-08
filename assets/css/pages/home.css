@@ -452,6 +452,16 @@
     ================= Responsive ====================
     =================================================
 */
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .block h3 {
+        font: var(--med-b-size-bold);
+    }
+
+    .contact-bar .title-head h3::after {
+        width: 46px;
+        right: -32px;
+    }
+}
 
 @media (min-width: 992px) and (max-width: 1200px) {
     .download-app .app {
