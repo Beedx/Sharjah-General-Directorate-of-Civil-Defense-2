@@ -1,0 +1,57 @@
+/* 
+    -----------------------
+       # Type: Page
+       # Name: Open Data
+    -----------------------
+*/
+.open-data {
+    margin-bottom: 80px;
+}
+
+.open-data h1 {
+    font: var(--big-size-bold);
+    color: var(--dark-gray);
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.open-data .table td,
+.open-data .table th {
+    color: var(--dark-gray);
+    font: var(--med-a-size-med);
+    text-align: right;
+    border-bottom: 1px solid #707070;
+    border-top: none;
+    padding-left: 0;
+}
+
+.open-data .table td.meta {
+    font: var(--med-a-size-bold);
+}
+
+/* 
+    =================================================
+    ================= Responsive ====================
+    =================================================
+*/
+
+@media (max-width: 992px) {
+    .open-data-page .accordion .card-header button {
+        text-transform: none;
+    }
+
+    .open-data h1 {
+        font: var(--med-b-size-bold);
+    }
+
+    .open-data .table td,
+    .open-data .table th {
+        font: var(--tiny-size-semi-bold);
+    }
+    
+    .open-data .table td.meta {
+        font: var(--tiny-size-bold);
+        text-align: right;
+        width: 22%;
+    }
+}

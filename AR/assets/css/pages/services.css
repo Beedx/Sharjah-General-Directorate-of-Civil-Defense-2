@@ -1,0 +1,228 @@
+/* 
+    -----------------------
+       # Type: Page
+       # Name: Services
+    -----------------------
+*/
+.services-table {
+    margin: 50px 0;
+}
+
+.services-table table {
+    color: var(--dark-gray);
+    text-align: right;
+}
+
+.services-table table thead {
+    text-transform: uppercase;
+    font: var(--med-a-size-bold);
+}
+
+.services-table table thead th {
+    border-top: none;
+}
+
+.services-table table thead th .wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.services-table table tbody {
+    font: var(--med-a-size-med);
+}
+
+.services-table table th {
+    padding: 24px 24px 24px 12px !important;
+}
+
+.services-table table td {
+    border-color: #dce0e8;
+    vertical-align: middle;
+    padding: 0 12px 0 24px;
+    height: 103px;
+}
+
+.services-table table td .services-details {
+    background-color: var(--main-green);
+    padding: 10px 16px;
+    border-radius: 49px;
+    color: #fff;
+    font: var(--small-size-med);
+    display: flow-root;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.services-table table td .services-details:hover {
+    padding: 10px 20px;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    display: none;
+}
+
+div.dataTables_filter {
+    display: none;
+}
+
+/* Table Pagination */
+.services-table .pagination {
+    margin: 25px auto 60px;
+    display: flex;
+    direction: ltr;
+    justify-content: center;
+}
+
+.services-table .pagination .navigation {
+    display: flex;
+}
+
+.services-table .pagination .count {
+    margin: 0 13px;
+    font-family: var(--main-font-en);
+    font-size: 11px;
+    font-weight: 100;
+    color: #6D7179;
+}
+
+.services-table .pagination .count small {
+    font-size: 11px;
+    font-weight: 100;
+}
+
+.services-table .pagination .count span {
+    font-size: 18px;
+    font-weight: 400;
+    margin-right: 4px;
+}
+
+/* Sorting Arrows */
+table.dataTable>thead .sorting:before,
+table.dataTable>thead .sorting_asc:before,
+table.dataTable>thead .sorting_desc:before,
+table.dataTable>thead .sorting_asc_disabled:before,
+table.dataTable>thead .sorting_desc_disabled:before {
+    content: unset !important;
+}
+
+table.dataTable>thead .sorting:after,
+table.dataTable>thead .sorting_asc:after,
+table.dataTable>thead .sorting_desc:after,
+table.dataTable>thead .sorting_asc_disabled:after,
+table.dataTable>thead .sorting_desc_disabled:after {
+    content: unset !important;
+}
+
+table.dataTable>thead .sorting .wrapper:before,
+table.dataTable>thead .sorting_asc .wrapper:before,
+table.dataTable>thead .sorting_desc .wrapper:before,
+table.dataTable>thead .sorting_asc_disabled .wrapper:before,
+table.dataTable>thead .sorting_desc_disabled .wrapper:before,
+table.dataTable>thead .sorting .wrapper:after,
+table.dataTable>thead .sorting_asc .wrapper:after,
+table.dataTable>thead .sorting_desc .wrapper:after,
+table.dataTable>thead .sorting_asc_disabled .wrapper:after,
+table.dataTable>thead .sorting_desc_disabled .wrapper:after {
+    font-family: 'FONT AWESOME 5 FREE';
+    opacity: 0.3;
+    position: absolute;
+    top: 7px;
+    right: -20px;
+}
+
+table.dataTable>thead .sorting .wrapper:before,
+table.dataTable>thead .sorting_asc .wrapper:before,
+table.dataTable>thead .sorting_desc .wrapper:before,
+table.dataTable>thead .sorting_asc_disabled .wrapper:before,
+table.dataTable>thead .sorting_desc_disabled .wrapper:before {
+    content: "\f0de" !important;
+}
+
+table.dataTable>thead .sorting .wrapper:after,
+table.dataTable>thead .sorting_asc .wrapper:after,
+table.dataTable>thead .sorting_desc .wrapper:after,
+table.dataTable>thead .sorting_asc_disabled .wrapper:after,
+table.dataTable>thead .sorting_desc_disabled .wrapper:after {
+    content: "\f0dd" !important;
+}
+
+table.dataTable>thead .sorting_asc .wrapper:before,
+table.dataTable>thead .sorting_desc .wrapper:after {
+    opacity: 1;
+}
+
+.service-details {
+    margin: 36px 0 66px;
+}
+
+.service-details .apply.button.mobile-only {
+    padding: 11px 17px;
+    border-radius: 50px;
+    background-color: var(--main-green);
+    color: var(--white);
+    font: var(--tiny-size-semi-bold);
+    line-height: 29px;
+    display: none;
+    margin-top: 24px;
+}
+
+.services-links.for-mobile {
+    display: none;
+}
+
+/* 
+    =================================================
+    ================= Responsive ====================
+    =================================================
+*/
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .services-table table td .services-details:hover {
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .service-details {
+        margin: 15px 0 40px;
+    }
+
+    .service-details .apply.button.mobile-only {
+        display: inline-block;
+    }
+
+    .service-details-page .page-header .page-tools .button {
+        display: none;
+    }
+
+    .services-table {
+        margin-top: 0;
+    }
+
+    .services-table table {
+        display: none;
+    }
+
+    .services-links.for-mobile {
+        display: block;
+    }
+
+    .services-links.for-mobile a {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 0;
+        border-bottom: 1px solid var(--hover-gray);
+        font: var(--tiny-size-med);
+        color: var(--dark-gray);
+    }
+
+    .services-links.for-mobile a span {
+        text-align: right;
+        margin-left: 15px;
+    }
+
+    .services-links.for-mobile a img {
+        transform: scale(-1, 1);
+    }
+}

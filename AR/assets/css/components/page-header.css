@@ -1,0 +1,148 @@
+/* 
+    -----------------------
+       # Type: Component
+       # Name: Page Header
+    -----------------------
+*/
+.page-header {
+    background-color: var(--white);
+    display: block;
+    text-align: right;
+}
+
+.page-header .page-breadcrumb {
+    background-color: #fff;
+    padding: 16px 0;
+}
+
+.page-header .page-breadcrumb,
+.page-header .page-breadcrumb a,
+.page-header .page-breadcrumb span {
+    color: var(--smooth-gray);
+    font: var(--small-size-med);
+    transition: color 0.2s;
+}
+
+.page-header .page-breadcrumb a:hover {
+    color: var(--med-gray);
+}
+
+.page-header .page-tools {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    align-items: center;
+}
+
+.page-header .page-tools .button {
+    padding: 11px 17px;
+    border-radius: 50px;
+    background-color: var(--main-green);
+    color: var(--white);
+    font: var(--small-size-semi-bold);
+    line-height: 29px;
+}
+
+/* Search Form */
+.page-header.services .page-tools {
+    display: flex;
+    align-items: center;
+}
+
+.page-header .page-tools .search-for-services {
+    position: relative;
+    width: 100%;
+}
+
+.page-header .page-tools .search-for-services input {
+    width: 100%;
+    height: 48px;
+    border-radius: 34px;
+    padding: 13px 21px 13px 50px;
+    border: 1px solid var(--straight-gray);
+    color: var(--darker-text);
+    font: var(--small-size-reg);
+}
+
+.page-header .page-tools .search-for-services button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-57%);
+    left: 15px;
+}
+
+.page-header .page-tools .title {
+    font: var(--big-size-bold);
+    color: var(--dark-gray);
+    margin-bottom: 0;
+    margin-left: 20px;
+    white-space: pre;
+}
+
+.page-header .page-tools .title span {
+    color: #6D7179;
+    font: var(--small-size-reg);
+    font-size: 14px;
+    display: grid;
+}
+
+.page-header .page-tools.page-tabs {
+    display: inline-flex !important;
+}
+
+.page-header .page-tools.page-tabs a.not-active h3 {
+    font: var(--big-size-med) !important;
+    color: #AAAFB7 !important;
+}
+
+.news-detail-page .page-header .page-tools .title {
+    white-space: unset;
+}
+
+/* 
+    =================================================
+    ================= Responsive ====================
+    =================================================
+*/
+
+@media (max-width: 992px) {
+
+    .page-header .page-breadcrumb,
+    .page-header .page-breadcrumb a,
+    .page-header .page-breadcrumb span {
+        font: var(--tiny-size-med);
+        padding-bottom: 4px;
+    }
+
+    .page-header .page-tools {
+        padding: 4px 0;
+    }
+
+    .page-header .page-tools .title {
+        font: var(--med-b-size-bold);
+    }
+
+    .page-header .page-tools.page-tabs a.not-active h3 {
+        font: var(--med-b-size-med) !important;
+    }
+
+    .page-header .page-tools .title span {
+        color: #AEB1B6;
+    }
+
+    .page-header.services .page-tools {
+        display: block;
+    }
+    
+    .page-header .page-tools .search-for-services {
+        margin-top: 5px;
+    }
+
+    .page-header .page-tools .search-for-services input {
+        font: var(--tiny-size-reg);
+    }
+    
+    .search-page .page-header .page-tools {
+        display: block;
+    }
+}

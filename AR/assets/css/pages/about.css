@@ -1,0 +1,203 @@
+/* 
+    -----------------------
+       # Type: Page
+       # Name: About
+    -----------------------
+*/
+.accordion>.card {
+    border: none;
+    text-align: right;
+}
+
+.accordion .card-header h2 {
+    line-height: 0;
+}
+
+.accordion .card-header button {
+    text-transform: uppercase;
+    padding: 0;
+    font: var(--med-a-size-bold);
+    direction: ltr;
+    color: var(--dark-gray);
+    text-decoration: none;
+    width: 100%;
+    text-align: right;
+    display: block;
+}
+
+.accordion>.card .card-header button::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 17px;
+    height: 1.27px;
+    background-color: var(--dark-gray);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.accordion>.card .card-header button::before {
+    position: absolute;
+    left: 8px;
+    content: '';
+    height: 17px;
+    width: 1.27px;
+    background-color: var(--dark-gray);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.accordion>.card .card-header button:not(.collapsed):before {
+    content: unset !important;
+}
+
+.accordion>.card .card-header {
+    padding: 16px 0;
+    background: none;
+    border-color: var(--straight-gray);
+    margin-bottom: 0 !important;
+    position: relative;
+}
+
+.accordion>.card .card-header~.collapsing,
+.accordion>.card .card-header~.collapse.show {
+    border-top: 2px solid var(--white);
+    margin-top: -2px;
+    position: relative;
+}
+
+.accordion>.card .card-body {
+    padding: 16px 0 30px;
+    font: var(--med-a-size-reg);
+}
+
+.list-of-logos {
+    margin: 100px 0;
+}
+
+.list-of-logos .title {
+    letter-spacing: 1.84px;
+    color: var(--dark-gray);
+    font: var(--big-size-bold);
+    margin-bottom: 13px;
+    text-align: right;
+}
+
+.list-of-logos .block {
+    background-color: var(--soft-gray);
+    width: 100%;
+    padding: 20px;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    height: 210px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.list-of-logos .block .hover-effect {
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.list-of-logos .block:hover .hover-effect {
+    opacity: 1;
+}
+
+.list-of-logos .block .hover-effect .details a {
+    display: inline-flex;
+    align-items: center;
+    direction: ltr;
+    justify-content: center;
+    color: #fff;
+    font: var(--med-b-size-semi-bold);
+}
+
+.list-of-logos .block .hover-effect .details img {
+    margin-left: 12px;
+}
+
+.list-of-logos .block>img {
+    max-width: 100%;
+    max-height: 100px;
+}
+
+.list-of-logos.our-certifications .block .cerificate {
+    display: flex;
+    align-items: center;
+    direction: ltr;
+}
+
+.list-of-logos.our-certifications .block .cerificate span {
+    color: var(--dark-blue);
+    letter-spacing: 0.76px;
+    font: var(--tiny-size-bold);
+}
+
+.list-of-logos.our-certifications .block .cerificate img {
+    margin-right: 16px;
+}
+
+/* 
+    =================================================
+    ================= Responsive ====================
+    =================================================
+*/
+
+@media (max-width: 992px) {
+    .accordion .card-header button {
+        font: var(--tiny-size-semi-bold);
+    }
+
+    .accordion>.card .card-body {
+        font: var(--tiny-size-reg);
+    }
+
+    .list-of-logos {
+        margin: 40px 0;
+    }
+
+    .list-of-logos .title {
+        font: var(--med-a-size-bold);
+        letter-spacing: 0.92px;
+    }
+
+    .list-of-logos .block {
+        height: 130px !important;
+    }
+
+    .list-of-logos .block .hover-effect .details a {
+        font: var(--small-size-semi-bold);
+    }
+
+    .list-of-logos .block .hover-effect .details img {
+        margin-left: 7px;
+        width: 15px;
+    }
+
+    .list-of-logos.our-certifications .block .cerificate img {
+        height: 30px;
+        margin-right: 7px;
+    }
+
+    .list-of-logos.our-certifications .block .cerificate span {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 500px) {
+    .list-of-logos .block {
+        height: 91px !important;
+    }
+}

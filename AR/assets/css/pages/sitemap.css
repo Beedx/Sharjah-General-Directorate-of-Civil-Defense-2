@@ -1,0 +1,51 @@
+/* 
+    -----------------------
+       # Type: Page
+       # Name: Sitemap
+    -----------------------
+*/
+.sitemap {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    text-align: right;
+}
+
+.sitemap .site-menu h4 {
+    font: var(--med-b-size-bold);
+    color: var(--dark-gray);
+    margin-bottom: 14px;
+}
+
+.sitemap .site-menu ul li {
+    margin-bottom: 10px;
+}
+
+.sitemap .site-menu ul li a {
+    font: var(--med-a-size-reg);
+    color: var(--dark-gray);
+}
+
+/* 
+    =================================================
+    ================= Responsive ====================
+    =================================================
+*/
+
+@media (max-width: 992px) {
+    .sitemap .site-menu {
+        margin-bottom: 24px;
+    }
+
+    .sitemap .site-menu h4 {
+        font: var(--med-a-size-bold);
+        margin-bottom: 8px;
+    }
+
+    .sitemap .site-menu ul li {
+        margin-bottom: 5px;
+    }
+
+    .sitemap .site-menu ul li a {
+        font: var(--tiny-size-reg);
+    }
+}
