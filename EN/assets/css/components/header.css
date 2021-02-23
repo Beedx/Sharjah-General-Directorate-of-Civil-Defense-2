@@ -156,7 +156,7 @@
     position: relative;
     top: 5px;
     font: var(--tiny-size-med);
-    padding: 10px 10px 15px;
+    padding: 15px 10px 15px;
     border-radius: 16px 16px 0 0;
     transition: all 0.2s;
 }
@@ -765,12 +765,12 @@
 
     .navigation-bar {
         height: 100%;
-        width: 0%;
+        width: 100%;
         position: fixed;
         z-index: 9999;
         overflow: hidden;
         top: 0;
-        left: 0;
+        left: -100%;
         background-color: var(--main-green);
         overflow-x: hidden;
         transition: 0.5s;
