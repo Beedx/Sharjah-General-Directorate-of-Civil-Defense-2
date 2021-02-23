@@ -188,7 +188,7 @@ table.dataTable>thead .sorting_desc .wrapper:after {
     }
 
     .service-details .apply.button.mobile-only {
-        display: inline-block;
+        display: table;
     }
 
     .service-details-page .page-header .page-tools .button {

@@ -14,14 +14,12 @@
     color: var(--dark-gray);
     font-family: var(--main-font-ar);
     font-weight: 400;
-    letter-spacing: 1.62px;
     margin-bottom: 16px;
 }
 
 .default-form .head span {
     color: var(--dark-gray);
     font: var(--med-a-size-reg);
-    letter-spacing: 0.97px;
 }
 
 .default-form form {

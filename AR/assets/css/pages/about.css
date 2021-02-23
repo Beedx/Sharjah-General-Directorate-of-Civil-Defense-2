@@ -14,7 +14,7 @@
 }
 
 .accordion .card-header button {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding: 0;
     font: var(--med-a-size-bold);
     direction: ltr;
@@ -68,6 +68,7 @@
 
 .accordion>.card .card-body {
     padding: 16px 0 30px;
+    border-bottom: 1px solid var(--straight-gray);
     font: var(--med-a-size-reg);
 }
 
@@ -199,5 +200,9 @@
 @media (max-width: 500px) {
     .list-of-logos .block {
         height: 91px !important;
+    }
+
+    .our-certifications.list-of-logos .block {
+        height: 120px !important;
     }
 }

@@ -11,7 +11,7 @@ $(document).ready(function () {
     // Mobile Version
     var heights = [];
     $('.mobile-bar .open-navigation-menu').click(function () {
-        $('.navigation-bar').css('width', '100%');
+        $('.navigation-bar').css('right', '0%');
         $('body').css('overflow', 'hidden');
 
         $('.navigation-bar .links-bar .main-links .nav-item.has-sub').each(function () {
@@ -27,7 +27,7 @@ $(document).ready(function () {
     });
 
     $('.mobile-bar .close-navigation-menu').click(function () {
-        $('.navigation-bar').css('width', '0%');
+        $('.navigation-bar').css('right', '-100%');
         $('body').css('overflow', 'auto');
 
         return false;
@@ -473,9 +473,11 @@ $(document).ready(function () {
     }
 
     // Download App
-    $('.download-app .stores a').hover(function () {
-        $(this).find('.scan-qr').fadeToggle(200);
-    });
+    if ($(window).width() > 768) {
+        $('.download-app .stores a').hover(function () {
+            $(this).find('.scan-qr').fadeToggle(200);
+        });
+    }
 
     /**
      * ---------------------
@@ -655,6 +657,13 @@ $(document).ready(function () {
             var getPages = Math.ceil($(items).length / perPage);
             return getPages;
         }
+
+        $('.page-header .page-tools .search-for-services input').on('keyup', function () {
+            $('.services-links.for-mobile a').removeClass('result');
+            $('.services-links.for-mobile a:contains(' + this.value + ')').show().css('display', 'flex').addClass('result');
+
+            $(".services-links.for-mobile a:not('.result')").hide();
+        });
 
         // Items Per Page
         var itemsNum = 10;

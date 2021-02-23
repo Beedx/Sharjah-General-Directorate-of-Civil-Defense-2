@@ -176,7 +176,7 @@
 
 .block h3 {
     margin-top: 16px;
-    font: var(--large-a-size-bold);
+    font: var(--large-b-size-bold);
     color: var(--darker-text);
     transition: all 0.3s;
 }
@@ -190,7 +190,7 @@
     padding: 15px 0;
     border-radius: 8px;
     transition: all 0.2s;
-    min-height: 230px;
+    min-height: 238px;
 }
 
 .slider-block.services .block .service:hover {
@@ -668,6 +668,10 @@
         width: 100%;
     }
 
+    .download-app .stores a img {
+        width: 135px;
+    }
+
     .stores {
         text-align: center;
     }
@@ -677,7 +681,7 @@
     }
 
     .download-app .stores a.app-store {
-        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .contact-bar {
@@ -775,5 +779,9 @@
         height: 295px;
         background-position: center -68px;
         background-size: 317%;
+    }
+
+    .slider-block.services .slick-track {
+        margin-right: -30px;
     }
 }
