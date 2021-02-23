@@ -343,6 +343,7 @@
 }
 
 /* Download The App */
+
 .download-app .app {
     margin-right: -180px;
     margin-top: 100px;
@@ -503,6 +504,7 @@
 }
 
 @media (max-width: 992px) {
+
     .home-slider {
         padding: 20px 0 0;
     }
@@ -646,6 +648,10 @@
 
     .events .slick-slide img {
         width: 23px;
+    }
+
+    .download-app .container{
+        overflow: hidden;
     }
 
     .download-app h3 span {
