@@ -118,6 +118,7 @@
 
     .page-header .page-tools .title {
         font: var(--med-b-size-bold);
+        white-space: unset;
     }
 
     .page-header .page-tools.page-tabs a.not-active h3 {

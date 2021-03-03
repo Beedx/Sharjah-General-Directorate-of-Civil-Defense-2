@@ -219,6 +219,11 @@
     align-items: center;
 }
 
+/* Happiness Icon */
+.tools-bar .tools .happiness path {
+    fill: var(--black);
+}
+
 /* Share Button */
 .tools-bar .tools .tool.share {
     position: relative;
@@ -261,6 +266,21 @@
 .tools-bar .tools .tool.share .share-icons a {
     /* transform: scale(-1, 1); */
     margin-right: 8px;
+}
+
+.tools-bar .tools .tool.share .share-icons a .copied {
+    position: absolute;
+    top: -30px;
+    right: 10%;
+    width: fit-content;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: var(--dark-blue);
+    padding: 7px 15px;
+    border-radius: 50px;
+    font: var(--tiny-size-med);
+    font-size: 12px;
+    display: none;
 }
 
 .tools-bar .tools .tool.share .share-icons i.close-pop {
@@ -916,8 +936,19 @@
         transform: rotate(-90deg);
     }
 
+    .tools-bar .tools .tool.share .share-icons a .copied {
+        top: -80px;
+        right: 13%;
+        transform: translateX(-50%) rotate(-90deg);
+    }
+
     .tools-bar .tools .tool.share .share-icons i.close-pop {
         margin-left: 9px;
+    }
+
+    /* Happiness Icon */
+    .tools-bar .tools .happiness path {
+        fill: var(--white);
     }
 
     .accessibility-settings .window {

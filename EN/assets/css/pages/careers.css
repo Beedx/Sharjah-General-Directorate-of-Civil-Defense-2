@@ -144,4 +144,8 @@
         font: var(--tiny-size-reg);
         margin-bottom: 24px;
     }
+
+    .apply-form.default-form form .group {
+        margin-bottom: 24px;
+    }   
 }

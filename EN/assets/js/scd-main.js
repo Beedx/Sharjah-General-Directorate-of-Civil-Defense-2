@@ -5,13 +5,13 @@ $(document).ready(function () {
      *   Header
      * ---------------------
      */
-    
+
     // +------ # Links Bar 
 
     // Mobile Version
     var heights = [];
     $('.mobile-bar .open-navigation-menu').click(function () {
-        $('.navigation-bar').css('width', '100%');
+        $('.navigation-bar').css('left', '0%');
         $('body').css('overflow', 'hidden');
 
         $('.navigation-bar .links-bar .main-links .nav-item.has-sub').each(function () {
@@ -29,7 +29,7 @@ $(document).ready(function () {
     });
 
     $('.mobile-bar .close-navigation-menu').click(function () {
-        $('.navigation-bar').css('width', '0%');
+        $('.navigation-bar').css('left', '-100%');
         $('body').css('overflow', 'auto');
 
         return false;
@@ -149,6 +149,10 @@ $(document).ready(function () {
             $(this).parent().find('.share-icons').fadeIn(200).css('display', 'inline-flex');
         });
     }
+
+    $('.facebook-link').attr(`href`, `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`);
+    $('.twitter-link').attr(`href`, `https://twitter.com/intent/tweet?text=${window.location.href}`);
+    $('.linkedin-link').attr(`href`, `https://www.linkedin.com/sharing/share-offsite/?url=${window.location.href}`);
 
     $('.meta-bar .share span').click(function () {
         $(this).parent().find('.share-icons').fadeIn(200).css('display', 'inline-flex');
@@ -466,9 +470,11 @@ $(document).ready(function () {
     }
 
     // Download App
-    $('.download-app .stores a').hover(function () {
-        $(this).find('.scan-qr').fadeToggle(200);
-    });
+    if ($(window).width() > 768) {
+        $('.download-app .stores a').hover(function () {
+            $(this).find('.scan-qr').fadeToggle(200);
+        });
+    }
 
     /**
      * ---------------------
@@ -645,6 +651,13 @@ $(document).ready(function () {
             return getPages;
         }
 
+        $('.page-header .page-tools .search-for-services input').on('keyup', function () {
+            $('.services-links.for-mobile a').removeClass('result');
+            $('.services-links.for-mobile a:contains(' + this.value + ')').show().css('display', 'flex').addClass('result');
+
+            $(".services-links.for-mobile a:not('.result')").hide();
+        });
+
         // Items Per Page
         var itemsNum = 10;
 
@@ -763,5 +776,22 @@ $(document).ready(function () {
             }, 200);
         }
     }
+
+    // Copy Link
+    $('.copy-link').click(function () {
+        var theLink = window.location.href;
+
+        navigator.clipboard.writeText(theLink).then(function () {
+            $('.tools-bar .tools .tool.share .share-icons a .copied').fadeIn(200);
+
+            setTimeout(() => {
+                $('.tools-bar .tools .tool.share .share-icons a .copied').fadeOut(200);
+            }, 1200);
+        }, function () {
+            alert('Failure to copy. Check permissions for clipboard')
+        });
+
+        return false;
+    });
 
 });

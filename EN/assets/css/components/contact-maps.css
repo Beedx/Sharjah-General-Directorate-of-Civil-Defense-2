@@ -84,6 +84,16 @@
     transition: color 0.2s;
 }
 
+.contact-bar .addresses .box nav a .icon {
+    fill: var(--smooth-gray);
+}
+
+.contact-bar .addresses .box nav a svg {
+    margin-right: 3px;
+    height: 15px;
+    margin-top: -3px;
+}
+
 .contact-bar .addresses .box nav a:first-child {
     margin-right: 18px;
 }
@@ -92,6 +102,10 @@
     color: var(--secondary-green);
     font: var(--small-size-bold);
     border-bottom-color: var(--secondary-green);
+}
+
+.contact-bar .addresses .box nav a.active .icon {
+    fill: var(--secondary-green);
 }
 
 .contact-bar .addresses .box nav a i {
@@ -161,10 +175,19 @@
     ================= Responsive ====================
     =================================================
 */
-@media (min-width: 1200px) and (max-width: 1400px) {
+
+@media (max-width: 470px) {
     .contact-page .contact-bar {
         padding: 0;
     }
+
+    .contact-bar .addresses .box {
+        padding: 20px 16px 50px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
 
     .contact-bar .addresses .box {
         padding: 50px 25px;
@@ -173,7 +196,7 @@
     .contact-bar .addresses .box nav a {
         font: var(--tiny-size-med);
     }
-    
+
     .contact-bar .addresses .box .menu a.active {
         font: var(--tiny-size-bold);
     }
