@@ -155,6 +155,10 @@ $(document).ready(function () {
         });
     }
 
+    $('.facebook-link').attr(`href`, `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`);
+    $('.twitter-link').attr(`href`, `https://twitter.com/intent/tweet?text=${window.location.href}`);
+    $('.linkedin-link').attr(`href`, `https://www.linkedin.com/sharing/share-offsite/?url=${window.location.href}`);
+
     $('.meta-bar .share span').click(function () {
         $(this).parent().find('.share-icons').fadeIn(200).css('display', 'inline-flex');
     });
@@ -783,4 +787,21 @@ $(document).ready(function () {
             }, 200);
         }
     }
+
+    // Copy Link
+    $('.copy-link').click(function () {
+        var theLink = window.location.href;
+
+        navigator.clipboard.writeText(theLink).then(function () {
+            $('.tools-bar .tools .tool.share .share-icons a .copied').fadeIn(200);
+
+            setTimeout(() => {
+                $('.tools-bar .tools .tool.share .share-icons a .copied').fadeOut(200);
+            }, 1200);
+        }, function () {
+            alert('Failure to copy. Check permissions for clipboard')
+        });
+
+        return false;
+    });
 });

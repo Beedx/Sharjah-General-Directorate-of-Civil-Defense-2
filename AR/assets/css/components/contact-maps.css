@@ -90,6 +90,15 @@
     display: inline-block;
 }
 
+.contact-bar .addresses .box nav a .icon {
+    fill: var(--smooth-gray);
+}
+
+.contact-bar .addresses .box nav a svg {
+    height: 15px;
+    margin-top: -3px;
+}
+
 .contact-bar .addresses .box nav a:first-child {
     margin-left: 18px;
 }
@@ -98,6 +107,10 @@
     color: var(--secondary-green);
     font: var(--small-size-bold);
     border-bottom-color: var(--secondary-green);
+}
+
+.contact-bar .addresses .box nav a.active .icon {
+    fill: var(--secondary-green);
 }
 
 .contact-bar .addresses .box nav a i {

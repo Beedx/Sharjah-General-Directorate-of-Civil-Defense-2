@@ -156,7 +156,7 @@
     position: relative;
     top: 5px;
     font: var(--tiny-size-med);
-    padding: 10px 10px 15px;
+    padding: 13px 10px 15px;
     border-radius: 16px 16px 0 0;
     transition: all 0.2s;
 }
@@ -220,6 +220,11 @@
     position: relative;
 }
 
+/* Happiness Icon */
+.tools-bar .tools .happiness path {
+    fill: var(--black);
+}
+
 .tools-bar .tools .tool.share .label {
     position: absolute;
     padding: 12px 11px;
@@ -254,6 +259,21 @@
 
 .tools-bar .tools .tool.share .share-icons a {
     margin-right: 8px;
+}
+
+.tools-bar .tools .tool.share .share-icons a .copied {
+    position: absolute;
+    top: -27px;
+    right: 0%;
+    width: fit-content;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: var(--dark-blue);
+    padding: 7px 15px;
+    border-radius: 50px;
+    font: var(--tiny-size-med);
+    font-size: 12px;
+    display: none;
 }
 
 .tools-bar .tools .tool.share .share-icons i.close-pop {
@@ -765,12 +785,12 @@
 
     .navigation-bar {
         height: 100%;
-        width: 0%;
+        width: 100%;
         position: fixed;
         z-index: 9999;
         overflow: hidden;
         top: 0;
-        left: 0;
+        left: -100%;
         background-color: var(--main-green);
         overflow-x: hidden;
         transition: 0.5s;
@@ -894,8 +914,19 @@
         transform: rotate(-90deg);
     }
 
+    .tools-bar .tools .tool.share .share-icons a .copied {
+        top: -80px;
+        right: 5%;
+        transform: translateX(-50%) rotate(-90deg);
+    }
+
     .tools-bar .tools .tool.share .share-icons i.close-pop {
         margin-left: 9px;
+    }
+
+    /* Happiness Icon */
+    .tools-bar .tools .happiness path {
+        fill: var(--white);
     }
 
     .accessibility-settings .window {
@@ -1005,6 +1036,10 @@
 @media (max-width: 382px) {
     .tools-bar .btns .button {
         padding: 15px 10px;
+    }
+
+    .tools-bar .btns .button.feedback-btn {
+        padding: 14.5px 10px;
     }
 
     .navigation-bar .tools-bar .btns .button {
