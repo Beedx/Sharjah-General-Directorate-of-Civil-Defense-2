@@ -42,7 +42,7 @@
 }
 
 .services-table table td .services-details {
-    background-color: var(--main-green);
+    background: var(--main-green);
     padding: 10px 16px;
     border-radius: 49px;
     color: #fff;
@@ -156,7 +156,7 @@ table.dataTable>thead .sorting_desc .wrapper:after {
 .service-details .apply.button.mobile-only {
     padding: 11px 17px;
     border-radius: 50px;
-    background-color: var(--main-green);
+    background: var(--main-green);
     color: var(--white);
     font: var(--tiny-size-semi-bold);
     line-height: 29px;

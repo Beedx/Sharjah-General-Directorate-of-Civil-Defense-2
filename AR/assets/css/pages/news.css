@@ -6,7 +6,7 @@
 */
 /* News Page */
 .news-page {
-    background-color: var(--white);
+    background: var(--white);
     padding: 20px 0;
     margin-bottom: 100px;
 }
@@ -46,7 +46,7 @@
     border-radius: 44px;
     transition: all 0.2s;
     cursor: pointer;
-    background-color: var(--hover-gray);
+    background: var(--hover-gray);
 }
 
 .meta-bar .share span {
@@ -67,7 +67,7 @@
     display: inline-flex;
     left: 0;
     border-radius: 22px;
-    background-color: var(--hover-gray);
+    background: var(--hover-gray);
     display: none;
 }
 
