@@ -19,3 +19,6 @@
 @import url("pages/open-data.css");
 @import url("pages/sitemap.css");
 @import url("pages/events.css");
+
+/* Accessibility */
+@import url("accessibility.css");

@@ -58,14 +58,14 @@
     top: 0;
     left: 0;
     z-index: 99;
-    background-color: var(--white);
+    background: var(--white);
     width: 100%;
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.13);
 }
 
 .navigation-bar .links-bar {
     height: 64px;
-    background-color: var(--main-green);
+    background: var(--main-green);
     position: relative;
 }
 
@@ -90,7 +90,7 @@
 
 .navigation-bar .links-bar .main-links .nav-item:hover,
 .navigation-bar .links-bar .main-links .nav-item.active {
-    background-color: var(--dark-green);
+    background: var(--dark-green);
 }
 
 .navigation-bar .links-bar .main-links .nav-item i {
@@ -100,7 +100,7 @@
 .navigation-bar .links-bar .login-btn {
     color: #0B582B;
     font: var(--small-size-med);
-    background-color: var(--white);
+    background: var(--white);
     padding: 10px 20px;
     border-radius: 29px;
     transition: all 0.2s;
@@ -116,7 +116,7 @@
     width: 100%;
     left: 0;
     top: 64px;
-    background-color: var(--dark-green);
+    background: var(--dark-green);
 }
 
 .navigation-bar .links-bar .sub-menu .sub-items {
@@ -140,7 +140,7 @@
 /* +----- Tools Menu */
 .tools-bar {
     height: 52px;
-    background-color: var(--lighter-gray);
+    background: var(--lighter-gray);
     position: relative;
 }
 
@@ -170,12 +170,12 @@
 }
 
 .tools-bar .emergency-btn {
-    background-color: var(--dark-red);
+    background: var(--dark-red);
     margin-right: 8px;
 }
 
 .tools-bar .feedback-btn {
-    background-color: var(--caramel);
+    background: var(--caramel);
 }
 
 .tools-bar .tools {
@@ -231,7 +231,7 @@
     display: none;
     right: 0;
     border-radius: 22px;
-    background-color: var(--hover-gray);
+    background: var(--hover-gray);
     align-items: center;
 }
 
@@ -253,7 +253,7 @@
     display: inline-flex;
     right: 0;
     border-radius: 22px;
-    background-color: var(--hover-gray);
+    background: var(--hover-gray);
     display: none;
 }
 
@@ -268,7 +268,7 @@
     width: fit-content;
     transform: translateX(-50%);
     color: #fff;
-    background-color: var(--dark-blue);
+    background: var(--dark-blue);
     padding: 7px 15px;
     border-radius: 50px;
     font: var(--tiny-size-med);
@@ -290,14 +290,14 @@
     width: 202px;
     top: 0;
     right: 0;
-    background-color: var(--white);
+    background: var(--white);
     box-shadow: 0px 5px 16px #5C6C8433;
     display: none;
     z-index: 99;
 }
 
 .tools-bar .tools .lang .lang-menu .t-btn {
-    background-color: #DBE0E8 !important;
+    background: #DBE0E8 !important;
     border-radius: 0;
     margin: 0;
     display: flex;
@@ -329,7 +329,7 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: var(--secondary-green);
+    background: var(--secondary-green);
     display: block;
     position: absolute;
     right: -15px;
@@ -353,13 +353,13 @@
 .tools-bar .tools .tool.lang .t-btn:hover,
 .tools-bar .tools .tool.lang .t-btn.active,
 .tools-bar .tools .tool:not(.lang):hover {
-    background-color: var(--hover-gray);
+    background: var(--hover-gray);
 }
 
 /* Search Form */
 
 .tools-bar .search-pop {
-    background-color: var(--white);
+    background: var(--white);
     position: absolute;
     top: 52px;
     left: 0;
@@ -384,7 +384,7 @@
     align-items: center;
     justify-content: center;
     color: var(--med-gray);
-    background-color: var(--light-gray);
+    background: var(--light-gray);
     border-radius: 50%;
 }
 
@@ -457,7 +457,7 @@
 }
 
 .accessibility-settings .window {
-    background-color: var(--white);
+    background: var(--white);
     border-radius: 16px;
     padding: 40px;
     position: relative;
@@ -522,7 +522,7 @@
 
 .accessibility-settings .window .action-btns .ab.save {
     color: #fff;
-    background-color: var(--main-green);
+    background: var(--main-green);
 }
 
 .accessibility-settings .window .action-btns .ab.reset {
@@ -603,19 +603,19 @@
 }
 
 .accessibility-settings .window .options-list .option .color-changer .color.black {
-    background-color: var(--black);
+    background: #000;
 }
 
 .accessibility-settings .window .options-list .option .color-changer .color.green {
-    background-color: var(--main-green);
+    background: #108240;
 }
 
 .accessibility-settings .window .options-list .option .color-changer .color.red {
-    background-color: var(--dark-red);
+    background: #C1311B;
 }
 
 .accessibility-settings .window .options-list .option .color-changer .color.caramel {
-    background-color: var(--caramel);
+    background: #9F8256;
 }
 
 /* Color Inverter */
@@ -662,7 +662,7 @@
 .happiness-meter .window {
     width: 100%;
     border-radius: 16px;
-    background-color: var(--white);
+    background: var(--white);
     overflow: hidden;
     margin: 40px 0;
 }
@@ -758,7 +758,7 @@
         align-items: center;
         height: 48px;
         justify-content: space-between;
-        background-color: var(--main-green);
+        background: var(--main-green);
         padding: 0 16px;
     }
 
@@ -773,7 +773,7 @@
 
     .mobile-bar .login-btn {
         color: var(--main-green);
-        background-color: var(--white);
+        background: var(--white);
         font: var(--mobile-size-med);
         padding: 3px 12px;
         border-radius: 30px;
@@ -791,7 +791,7 @@
         overflow: hidden;
         top: 0;
         left: -100%;
-        background-color: var(--main-green);
+        background: var(--main-green);
         overflow-x: hidden;
         transition: 0.5s;
     }
@@ -805,7 +805,7 @@
     }
 
     .navigation-bar .tools-bar {
-        background-color: unset;
+        background: unset;
         position: absolute;
         bottom: 0;
         height: auto;
@@ -867,7 +867,7 @@
     }
 
     .navigation-bar .search-mobile {
-        background-color: var(--soft-gray);
+        background: var(--soft-gray);
         display: flex;
         justify-content: space-between;
         padding: 14px 29px;
@@ -891,7 +891,7 @@
     .tools-bar .tools .tool.lang .t-btn:hover,
     .tools-bar .tools .tool.lang .t-btn.active,
     .tools-bar .tools .tool:not(.lang):hover {
-        background-color: #0f6132;
+        background: var(--dark-green);
     }
 
     .tools-bar .tools .tool>a img,
@@ -930,7 +930,7 @@
     }
 
     .accessibility-settings .window {
-        background-color: var(--white);
+        background: var(--white);
         border-radius: 0;
         padding: 40px;
         margin: 0;
@@ -989,7 +989,7 @@
     }
 
     .happiness-meter .overlay {
-        background-color: #E7E9EB;
+        background: #E7E9EB;
     }
 
     .happiness-meter .close-window {

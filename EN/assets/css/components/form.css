@@ -116,7 +116,7 @@
 }
 
 .default-form form button#send-message {
-    background-color: var(--main-green);
+    background: var(--main-green);
     color: #fff;
     padding: 10px 70px;
     border-radius: 30px;
