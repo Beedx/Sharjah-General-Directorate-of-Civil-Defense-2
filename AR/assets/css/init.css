@@ -262,7 +262,7 @@ a.primary-btn {
     --main-font-ar: 'Cairo';
     --standard-size: 24px;
 
-    /* Mobile Size */
+    /* Tiny Size */
     --mobile-size-reg: 100 12px 'Cairo';
     --mobile-size-med: 200 12px 'Cairo';
     --mobile-size-semi-bold: 300 12px 'Cairo';
