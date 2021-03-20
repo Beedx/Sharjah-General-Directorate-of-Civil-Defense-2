@@ -1,0 +1,242 @@
+@media print {
+
+    /* General */
+    * {
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+
+    body {
+        padding-top: 0 !important;
+    }
+
+    /* Page Settings */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        page-break-before: avoid;
+    }
+
+    .block,
+    .offer,
+    .contact-page .contact-form.default-form,
+    p,
+    footer,
+    form,
+    img,
+    iframe,
+    table,
+    figure,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a {
+        page-break-inside: avoid !important;
+    }
+
+    .news.slider-block,
+    iframe,
+    .our-partners.list-of-logos {
+        page-break-before: always;
+    }
+
+    /* Header */
+    .logos-bar {
+        margin-bottom: 35px;
+    }
+
+    .logos-bar img {
+        max-height: 80px !important;
+    }
+
+    .logos-bar a.uae-logo img {
+        margin-right: 15px;
+    }
+
+    /* Footer */
+    footer .main {
+        padding: 30px 0;
+    }
+
+    footer .copywrights-bar {
+        text-align: center;
+    }
+
+    footer .main .col-lg-3 {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .main .data {
+        margin: 0 30px;
+    }
+
+    footer .copywrights-bar .col-lg-4,
+    footer .main .col-lg-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Content */
+    .page-header .page-tools .title,
+    .page-header .page-tools.page-tabs a.not-active h3 {
+        font: var(--big-size-bold) !important;
+    }
+
+    .home-slider,
+    .news,
+    .slider-block.partners {
+        background: unset !important;
+    }
+
+    .home-slider .slick-initialized .slick-slide {
+        width: 100% !important;
+    }
+
+    .slick-track {
+        display: flex !important;
+        justify-content: center;
+    }
+
+    .slider-block.partners .slick-slide,
+    .slider-block.services .slick-slide {
+        width: 33% !important;
+        margin-bottom: 25px;
+    }
+
+    .slider-block.news .slick-slide {
+        width: 50% !important;
+        margin-bottom: 25px;
+    }
+
+    .slider-block.events .slick-slide {
+        width: 50% !important;
+        margin-bottom: 25px;
+    }
+
+    .slick-slider .slick-track {
+        width: 100% !important;
+        transform: unset !important;
+    }
+
+    .slider-block .title-head h3 {
+        font: var(--med-b-size-bold);
+    }
+
+    .download-app .stores a img {
+        width: 210px;
+    }
+
+    .download-app h3 {
+        font: var(--large-b-size-semi-bold);
+    }
+
+    .download-app .app {
+        margin-left: 21px;
+        width: 70%;
+    }
+
+    .accordion>.card .card-header button::before,
+    .accordion>.card .card-header button::after {
+        content: unset;
+    }
+
+    .card .collapse {
+        display: block !important;
+    }
+
+    .accordion>.card .card-header,
+    .accordion>.card .card-body {
+        border: none;
+    }
+
+    .list-of-logos.our-certifications .block .cerificate span {
+        font: var(--small-size-bold);
+    }
+
+    .accordion .card-header button {
+        font: var(--small-size-semi-bold);
+    }
+
+    .accordion>.card .card-body {
+        font: var(--small-size-reg);
+    }
+
+    .services-links.for-mobile a {
+        display: flex !important;
+        font: var(--small-size-med);
+    }
+
+    .news-page .block,
+    .events-page .block {
+        display: block !important;
+    }
+
+    .job-vacancies .offer .details h3 {
+        font: var(--med-b-size-semi-bold);
+    }
+
+    .job-vacancies .offer .details span {
+        font: var(--small-size-med);
+    }
+
+    .job-details h2 {
+        font: var(--med-b-size-bold);
+    }
+
+    .job-details p {
+        font: var(--small-size-reg);
+    }
+
+    .page-header.news-details-header .page-tools .title {
+        font: var(--large-a-size-bold) !important;
+    }
+
+    .entry p {
+        font: var(--small-size-reg);
+    }
+
+    .meta-bar .date {
+        font: var(--small-size-med);
+    }
+
+    .event-details .block .event {
+        margin-top: 70px;
+    }
+
+    .contact-page .contact-form.default-form {
+        background: unset !important;
+    }
+
+    /* Hide In Print */
+    .home-slider .controllers,
+    .slick-slide:not(.slick-active):not(.slick-center),
+    .slider-block .title-head .controllers,
+    .slider-block .title-head h3>a,
+    .home-slider .single-slide .slide-content .learn-more,
+    .meta-bar .share,
+    .job-details a.primary-btn,
+    .job-details br,
+    .job-vacancies .offer a.primary-btn,
+    .load-more,
+    .page-header .page-tools .search-for-services,
+    .services-table .pagination,
+    .services-links.for-mobile a img,
+    .service-details .apply.button.mobile-only,
+    .navigation-bar,
+    .mobile-bar,
+    .chatbot,
+    .overlay,
+    footer .main .quick-links .title,
+    footer .main .quick-links ul,
+    footer .links-bar,
+    footer .main .goUp {
+        display: none !important;
+    }
+}
