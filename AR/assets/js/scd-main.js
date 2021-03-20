@@ -10,8 +10,8 @@ $(document).ready(function () {
 
     // Mobile Version
     var heights = [];
-    $('.mobile-bar .open-navigation-menu').click(function () {
-        $('.navigation-bar').css('width', '100%');
+    function getHeights() {
+        $('.navigation-bar').css('right', '0%');
         $('body').css('overflow', 'hidden');
 
         $('.navigation-bar .links-bar .main-links .nav-item.has-sub').each(function () {
@@ -24,10 +24,13 @@ $(document).ready(function () {
         });
 
         return false;
-    });
+    }
+
+    $('.mobile-bar .open-navigation-menu').click(getHeights);
+    $('.accessibility-settings input[type="range"]').on('input', getHeights);
 
     $('.mobile-bar .close-navigation-menu').click(function () {
-        $('.navigation-bar').css('width', '0%');
+        $('.navigation-bar').css('right', '-100%');
         $('body').css('overflow', 'auto');
 
         return false;
@@ -155,6 +158,10 @@ $(document).ready(function () {
         });
     }
 
+    $('.facebook-link').attr(`href`, `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`);
+    $('.twitter-link').attr(`href`, `https://twitter.com/intent/tweet?text=${window.location.href}`);
+    $('.linkedin-link').attr(`href`, `https://www.linkedin.com/sharing/share-offsite/?url=${window.location.href}`);
+
     $('.meta-bar .share span').click(function () {
         $(this).parent().find('.share-icons').fadeIn(200).css('display', 'inline-flex');
     });
@@ -191,106 +198,6 @@ $(document).ready(function () {
 
     $('.tools-bar .search-pop .close-search-pop').click(function () {
         $(this).parent().fadeOut(200);
-    });
-
-
-
-    // Accessibility Settings
-    $('.tools-bar .tools .tool.accessibilty').click(function (e) {
-        $('.accessibility-settings').fadeIn(200);
-        $('body').css('overflow', 'hidden');
-        e.stopPropagation();
-    });
-
-    $('.accessibility-settings .window .close-window').click(function () {
-        $(this).parents('.accessibility-settings').fadeOut(200);
-
-        if ($(window).width() >= 992) {
-            $('body').css('overflow', 'auto');
-        }
-    });
-
-    $(window).click(function () {
-        $('.accessibility-settings').fadeOut(200);
-        $('body').css('overflow', 'auto');
-    });
-
-    $('.accessibility-settings .window').click(function (e) {
-        e.stopPropagation();
-    });
-
-    // Font Sizer
-    var levels = ['صغير', 'وسط', 'كبير'];
-
-    $('input[type="range"]').each(function (e) {
-        var val = $(this).val();
-        var min = $(this).attr('min');
-        var max = $(this).attr('max');
-
-        var currentPercentage = (val / (max - min)) * 100;
-        $(this).siblings('output').css({
-            'left': currentPercentage + '%',
-            'transform': 'translateX(-' + currentPercentage + '%)'
-        }).text(levels[val]);
-
-        $(this).css({
-            '--value': val,
-            '--min': min == '' ? '0' : min,
-            '--max': max == '' ? '2' : max
-        });
-
-        $(this).on('input', function () {
-            var cur = $(this).val();
-
-            var cp = (cur / (max - min)) * 100;
-            $(this).siblings('output').css({
-                'left': cp + '%',
-                'transform': 'translateX(-' + cp + '%)'
-            }).text(levels[cur]);
-
-            $(this).css('--value', cur);
-        });
-    });
-
-    // Color Changer
-    $('.accessibility-settings .window .options-list .option .color-changer .color').click(function () {
-        $(this).addClass('active').siblings().removeClass('active');
-        $(this).html('<i class="fas fa-check"></i>').siblings().html('');
-    });
-
-    // Colors Inverter
-    $('.accessibility-settings .window .options-list .option .switch span').click(function () {
-        $(this).addClass('active').siblings().removeClass('active');
-    });
-
-    // Print Document
-    $('.accessibility-settings .window .options-list .option .print-page .print-doc').click(function () {
-        // window.print();
-    });
-
-    // Reset
-    $('.accessibility-settings .window .action-btns .ab.reset').click(function () {
-        $('.accessibility-settings .window .options-list .option .color-changer .color.default').addClass('active').siblings().removeClass('active');
-        $('.accessibility-settings .window .options-list .option .color-changer .color.default').html('<i class="fas fa-check"></i>').siblings().html('');
-
-        $('.accessibility-settings .window .options-list .option .switch span.default').addClass('active').siblings().removeClass('active');
-
-        $('input#font-sizer').each(function () {
-            var def = $(this).data('default');
-            var min = $(this).attr('min');
-            var max = $(this).attr('max');
-
-            var cp = (def / (max - min)) * 100;
-            $(this).siblings('output').css({
-                'left': cp + '%',
-                'transform': 'translateX(-' + cp + '%)'
-            }).text(levels[def]);
-
-            console.log(def);
-
-            $(this).css('--value', def.toString());
-            $(this).val(def);
-        });
     });
 
     // Happiness Meter
@@ -473,9 +380,11 @@ $(document).ready(function () {
     }
 
     // Download App
-    $('.download-app .stores a').hover(function () {
-        $(this).find('.scan-qr').fadeToggle(200);
-    });
+    if ($(window).width() > 768) {
+        $('.download-app .stores a').hover(function () {
+            $(this).find('.scan-qr').fadeToggle(200);
+        });
+    }
 
     /**
      * ---------------------
@@ -656,6 +565,13 @@ $(document).ready(function () {
             return getPages;
         }
 
+        $('.page-header .page-tools .search-for-services input').on('keyup', function () {
+            $('.services-links.for-mobile a').removeClass('result');
+            $('.services-links.for-mobile a:contains(' + this.value + ')').show().css('display', 'flex').addClass('result');
+
+            $(".services-links.for-mobile a:not('.result')").hide();
+        });
+
         // Items Per Page
         var itemsNum = 10;
 
@@ -774,4 +690,21 @@ $(document).ready(function () {
             }, 200);
         }
     }
+
+    // Copy Link
+    $('.copy-link').click(function () {
+        var theLink = window.location.href;
+
+        navigator.clipboard.writeText(theLink).then(function () {
+            $('.tools-bar .tools .tool.share .share-icons a .copied').fadeIn(200);
+
+            setTimeout(() => {
+                $('.tools-bar .tools .tool.share .share-icons a .copied').fadeOut(200);
+            }, 1200);
+        }, function () {
+            alert('Failure to copy. Check permissions for clipboard')
+        });
+
+        return false;
+    });
 });

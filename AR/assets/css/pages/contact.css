@@ -5,11 +5,11 @@
     -----------------------
 */
 .contact-page .contact-form.default-form {
-    background-color: #FCFCFC;
+    background: #FCFCFC;
 }
 
 @media (max-width: 992px) {
     .contact-page .contact-form.default-form {
-        background-color: var(--soft-gray);
+        background: var(--soft-gray);
     }
 }

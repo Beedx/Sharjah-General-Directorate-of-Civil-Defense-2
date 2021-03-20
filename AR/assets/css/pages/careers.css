@@ -68,7 +68,7 @@
 }
 
 .app-success .window {
-    background-color: var(--white);
+    background: var(--white);
     border-radius: 16px;
     padding: 40px;
     position: relative;
@@ -99,7 +99,7 @@
     color: var(--white);
     display: inline-block;
     padding: 13px 16px;
-    background-color: var(--main-green);
+    background: var(--main-green);
     border-radius: 50px;
 }
 
@@ -146,5 +146,10 @@
 
     .app-success .window p {
         font: var(--tiny-size-reg);
-        margin-bottom: 24px;   }
+        margin-bottom: 24px;
+    }
+
+    .apply-form.default-form form .group {
+        margin-bottom: 24px;
+    }
 }

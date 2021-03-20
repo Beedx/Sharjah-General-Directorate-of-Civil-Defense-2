@@ -11,7 +11,7 @@
 .home-slider {
     padding: 40px 25px;
     position: relative;
-    background-color: #F9FAFC;
+    background: #F9FAFC;
 }
 
 .home-slider .controllers {
@@ -109,7 +109,7 @@
     color: #fff;
     padding: 10px 20px;
     border-radius: 30px;
-    background-color: var(--main-green);
+    background: var(--main-green);
     display: inline-block;
     margin-top: 34px;
     transition: all 0.4s;
@@ -165,7 +165,7 @@
 .block .icon {
     margin: 0 auto;
     display: flex;
-    background-color: var(--transparent-green);
+    background: var(--transparent-green);
     width: 110px;
     height: 110px;
     align-items: center;
@@ -174,11 +174,20 @@
     border-radius: 50%;
 }
 
+.block .icon img{
+    max-width: 110px;
+}
+
 .block h3 {
     margin-top: 16px;
-    font: var(--large-a-size-bold);
+    font: var(--large-b-size-bold);
     color: var(--darker-text);
     transition: all 0.3s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 /* Services */
@@ -186,15 +195,24 @@
     text-align: center;
 }
 
+.slider-block.services .block h3{
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
 .slider-block.services .block .service {
     padding: 15px 0;
     border-radius: 8px;
     transition: all 0.2s;
-    min-height: 230px;
+    min-height: 238px;
 }
 
 .slider-block.services .block .service:hover {
-    background-color: var(--main-green);
+    background: var(--main-green);
 }
 
 .slider-block.services .block .service:hover h3 {
@@ -202,12 +220,12 @@
 }
 
 .slider-block.services .block .service:hover .icon {
-    background-color: var(--white);
+    background: var(--white);
 }
 
 /* News */
 .news {
-    background-color: var(--soft-gray);
+    background: var(--soft-gray);
 }
 
 .news section {
@@ -259,7 +277,7 @@
 }
 
 .events .block .event {
-    background-color: var(--soft-gray);
+    background: var(--soft-gray);
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -272,7 +290,7 @@
 .events .block .event .hover-effect {
     width: 100%;
     height: 100%;
-    background-color: var(--main-green);
+    background: var(--main-green);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -307,7 +325,7 @@
 .events .block .event .icon {
     width: 86px;
     height: 86px;
-    background-color: var(--main-green);
+    background: var(--main-green);
 }
 
 .events .block .event h3 {
@@ -316,6 +334,11 @@
     font-size: calc(var(--standard-size) + 4px);
     line-height: 34px;
     margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .events .block .event .date {
@@ -343,6 +366,7 @@
 }
 
 /* Download The App */
+
 .download-app .app {
     margin-right: -180px;
     margin-top: 100px;
@@ -377,7 +401,7 @@
 .download-app .stores a .scan-qr {
     padding: 19px;
     box-shadow: 0px 3px 16px #00000052;
-    background-color: var(--white);
+    background: var(--white);
     width: 100%;
     position: absolute;
     border-radius: 5px;
@@ -405,7 +429,7 @@
 
 /* Partners */
 .slider-block.partners {
-    background-color: var(--soft-gray);
+    background: var(--soft-gray);
 }
 
 .slider-block.partners section {
@@ -417,7 +441,7 @@
 }
 
 .slider-block.partners .partner-logo {
-    background-color: var(--white);
+    background: var(--white);
     width: 100%;
     padding: 20px;
     border-radius: 6px;
@@ -432,7 +456,7 @@
 .slider-block.partners .block .partner-logo .hover-effect {
     width: 100%;
     height: 100%;
-    background-color: var(--main-green);
+    background: var(--main-green);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -503,6 +527,7 @@
 }
 
 @media (max-width: 992px) {
+
     .home-slider {
         padding: 20px 0 0;
     }
@@ -510,7 +535,7 @@
     .home-slider .controllers {
         right: 0;
         bottom: 0;
-        background-color: var(--white);
+        background: var(--white);
         padding: 14px;
         left: unset;
     }
@@ -539,6 +564,11 @@
 
     .home-slider .single-slide .slide-content .title {
         font: var(--med-a-size-bold);
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
 
     .home-slider .single-slide .slide-content .quote {
@@ -547,6 +577,11 @@
 
     .home-slider .single-slide .slide-content .quote p {
         font: var(--mobile-size-reg);
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
     }
 
     .home-slider .single-slide .slide-content .quote img {
@@ -557,10 +592,20 @@
 
     .home-slider .single-slide .slide-content .quote .person .name {
         font: var(--tiny-size-bold);
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
     }
 
     .home-slider .single-slide .slide-content .quote .person .his-title {
         font: var(--tiny-size-reg);
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
     }
 
     .home-slider .single-slide .slide-content .learn-more {
@@ -648,6 +693,10 @@
         width: 23px;
     }
 
+    .download-app .container{
+        overflow: hidden;
+    }
+
     .download-app h3 span {
         display: none;
     }
@@ -668,6 +717,10 @@
         width: 100%;
     }
 
+    .download-app .stores a img {
+        width: 135px;
+    }
+
     .stores {
         text-align: center;
     }
@@ -677,7 +730,7 @@
     }
 
     .download-app .stores a.app-store {
-        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .contact-bar {
@@ -776,4 +829,8 @@
         background-position: center -68px;
         background-size: 317%;
     }
+
+    /* .slider-block.services .slick-track {
+        margin-right: -30px;
+    } */
 }

@@ -33,7 +33,7 @@
 }
 
 .search-results .single-result h3 span {
-    background-color: var(--marker);
+    background: var(--marker);
 }
 
 .search-results .single-result p {

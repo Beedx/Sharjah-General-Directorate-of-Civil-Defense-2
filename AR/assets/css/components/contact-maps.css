@@ -5,7 +5,7 @@
     -----------------------
 */
 .contact-bar {
-    background-color: var(--soft-gray);
+    background: var(--soft-gray);
     padding: 80px 0;
 }
 
@@ -21,7 +21,7 @@
     content: '';
     position: absolute;
     width: 230px;
-    background-color: var(--darker-text);
+    background: var(--darker-text);
     height: 2px;
     display: block;
     top: 50%;
@@ -49,7 +49,7 @@
     margin-left: 0;
 }
 
-.contact-bar .meta .icon {
+.contact-bar .meta svg {
     margin-left: 16px;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .contact-bar .addresses {
-    background-color: var(--white);
+    background: var(--white);
     width: 100%;
     margin-top: 40px;
     height: 380px;
@@ -90,6 +90,15 @@
     display: inline-block;
 }
 
+.contact-bar .addresses .box nav a .icon {
+    fill: var(--smooth-gray);
+}
+
+.contact-bar .addresses .box nav a svg {
+    height: 15px;
+    margin-top: -3px;
+}
+
 .contact-bar .addresses .box nav a:first-child {
     margin-left: 18px;
 }
@@ -98,6 +107,10 @@
     color: var(--secondary-green);
     font: var(--small-size-bold);
     border-bottom-color: var(--secondary-green);
+}
+
+.contact-bar .addresses .box nav a.active .icon {
+    fill: var(--secondary-green);
 }
 
 .contact-bar .addresses .box nav a i {
@@ -124,12 +137,12 @@
 }
 
 .contact-bar .addresses .box .menu::-webkit-scrollbar-track {
-    background-color: var(--lighter-gray);
+    background: var(--lighter-gray);
     border-radius: 15px;
 }
 
 .contact-bar .addresses .box .menu::-webkit-scrollbar-thumb {
-    background-color: var(--light-gray);
+    background: var(--light-gray);
     border-radius: 15px;
 }
 
@@ -150,7 +163,7 @@
 .contact-bar .addresses .box .menu a.active::after {
     content: '';
     width: 40px;
-    background-color: var(--darker-text);
+    background: var(--darker-text);
     height: 2px;
     display: inline-block;
     margin-right: 8px;

@@ -6,7 +6,7 @@
 */
 /* Chatbot */
 .chatbot {
-    background-color: #2B323C;
+    background: #2B323C;
     min-width: 64px;
     height: 64px;
     padding: 0 20px;
@@ -36,7 +36,7 @@ footer {
 }
 
 footer .main {
-    background-color: var(--dark-blue);
+    background: var(--dark-blue);
     padding: 45px 0;
     position: relative;
 }
@@ -87,7 +87,7 @@ footer .main .quick-links .title::after {
     content: '';
     position: absolute;
     width: 54px;
-    background-color: #fff;
+    background: #fff;
     height: 2px;
     display: block;
     top: 50%;
@@ -116,7 +116,7 @@ footer .main .quick-links ul li a:hover {
 }
 
 footer .links-bar {
-    background-color: var(--darker-blue);
+    background: var(--darker-blue);
     height: 80px;
     display: flex;
     align-items: center;
@@ -147,7 +147,7 @@ footer .social-accounts a {
     height: 44px;
     font-size: 21px;
     border-radius: 50%;
-    background-color: #fff;
+    background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,7 +157,7 @@ footer .social-accounts a {
 }
 
 footer .social-accounts a:hover {
-    background-color: var(--darkest-blue);
+    background: var(--darkest-blue);
     color: #fff;
 }
 
@@ -174,7 +174,7 @@ footer .social-accounts a img.insta-white {
 }
 
 .copywrights-bar {
-    background-color: var(--darkest-blue);
+    background: var(--darkest-blue);
     display: flex;
     align-items: center;
     color: rgba(255, 255, 255, 0.5);
@@ -220,19 +220,16 @@ footer .social-accounts a img.insta-white {
 @media (max-width: 992px) {
 
     .chatbot {
-        min-width: 32px;
-        height: 32px;
-        padding: 0 8px;
+        min-width: 56px;
+        height: 56px;
+        padding: 0 16px;
         bottom: 27px;
+        right: 20px;
     }
 
     .chatbot span {
         font: var(--small-size-med);
         font-size: 13px;
-    }
-
-    .chatbot img {
-        width: 15px;
     }
 
     footer .main,

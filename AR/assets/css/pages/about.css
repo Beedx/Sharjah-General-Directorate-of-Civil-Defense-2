@@ -14,7 +14,7 @@
 }
 
 .accordion .card-header button {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding: 0;
     font: var(--med-a-size-bold);
     direction: ltr;
@@ -31,7 +31,7 @@
     content: '';
     width: 17px;
     height: 1.27px;
-    background-color: var(--dark-gray);
+    background: var(--dark-gray);
     top: 50%;
     transform: translateY(-50%);
 }
@@ -42,7 +42,7 @@
     content: '';
     height: 17px;
     width: 1.27px;
-    background-color: var(--dark-gray);
+    background: var(--dark-gray);
     top: 50%;
     transform: translateY(-50%);
 }
@@ -68,6 +68,7 @@
 
 .accordion>.card .card-body {
     padding: 16px 0 30px;
+    border-bottom: 1px solid var(--straight-gray);
     font: var(--med-a-size-reg);
 }
 
@@ -84,7 +85,7 @@
 }
 
 .list-of-logos .block {
-    background-color: var(--soft-gray);
+    background: var(--soft-gray);
     width: 100%;
     padding: 20px;
     border-radius: 6px;
@@ -100,7 +101,7 @@
 .list-of-logos .block .hover-effect {
     width: 100%;
     height: 100%;
-    background-color: var(--main-green);
+    background: var(--main-green);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,5 +200,9 @@
 @media (max-width: 500px) {
     .list-of-logos .block {
         height: 91px !important;
+    }
+
+    .our-certifications.list-of-logos .block {
+        height: 120px !important;
     }
 }

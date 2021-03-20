@@ -5,13 +5,13 @@
     -----------------------
 */
 .page-header {
-    background-color: var(--white);
+    background: var(--white);
     display: block;
     text-align: right;
 }
 
 .page-header .page-breadcrumb {
-    background-color: #fff;
+    background: #fff;
     padding: 16px 0;
 }
 
@@ -37,7 +37,7 @@
 .page-header .page-tools .button {
     padding: 11px 17px;
     border-radius: 50px;
-    background-color: var(--main-green);
+    background: var(--main-green);
     color: var(--white);
     font: var(--small-size-semi-bold);
     line-height: 29px;
@@ -120,6 +120,7 @@
 
     .page-header .page-tools .title {
         font: var(--med-b-size-bold);
+        white-space: unset;
     }
 
     .page-header .page-tools.page-tabs a.not-active h3 {

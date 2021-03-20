@@ -1,0 +1,109 @@
+/**
+  * ==========================================
+  *     Large Font Size
+  * ==========================================
+  */
+.large-font-size .navigation-bar .links-bar {
+    height: 68px;
+}
+
+.large-font-size .navigation-bar .links-bar .sub-menu {
+    top: 68px;
+}
+
+@media (min-width: 1400px) {
+
+    .large-font-size .tools-bar,
+    .large-font-size .tools-bar .btns,
+    .large-font-size .tools-bar .tools {
+        height: 65px;
+    }
+
+    .large-font-size footer .main .quick-links .title::after {
+        width: 55px;
+    }
+
+    .large-font-size .contact-bar .title-head h3::after {
+        left: -45px;
+        width: 126px;
+    }
+}
+
+.large-font-size .events .block .event {
+    height: 450px;
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .large-font-size .contact-bar .meta {
+        margin-left: 10px;
+    }
+
+    .large-font-size .contact-bar .title-head h3::after {
+        content: unset;
+    }
+
+    .large-font-size .copywrights-bar .col-lg-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .large-font-size .links-bar .col-lg-6 {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 992px) {
+    .large-font-size .home-slider .single-slide .slide-content {
+        margin-bottom: 10px;
+    }
+
+    .large-font-size .navigation-bar .links-bar .container {
+        height: auto;
+    }
+
+    .large-font-size .navigation-bar .tools-bar .btns .button {
+        height: 68px;
+    }
+
+    .large-font-size .navigation-bar .tools-bar .btns .button.emergency-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .large-font-size .navigation-bar .tools-bar .btns .button.emergency-btn strong {
+        margin-left: 6px;
+    }
+
+    .large-font-size footer .main .goUp {
+        top: -218px;
+    }
+}
+
+/**
+  * ==========================================
+  *     Small Font Size
+  * ==========================================
+  */
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .small-font-size .contact-bar .title-head h3::after {
+        width: 162px;
+        right: -125px;
+    }
+
+    .small-font-size footer .main .quick-links .title::after {
+        width: 80px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .small-font-size .contact-bar .title-head h3::after {
+        width: 315px;
+        left: -205px;
+    }
+
+    .small-font-size footer .main .quick-links .title::after {
+        width: 110px;
+    }
+}
