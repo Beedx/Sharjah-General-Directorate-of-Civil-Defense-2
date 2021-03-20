@@ -7,13 +7,17 @@
 // Get Saved Settings in Browser
 let colorDetails = JSON.parse(window.localStorage.getItem('CurrentColor'));
 let fontSize = window.localStorage.getItem('FontSize');
-let colorInverted = window.localStorage.getItem('ColorInverted');
+let colorInverted = Boolean(window.localStorage.getItem('ColorInverted'));
 
 // Declare Functionality
 function changeColor(color) {
 
+    
     // If the color is set
     if (color.currentColor) {
+        
+        // Add Class To Body Tag
+        $('body').addClass('color-changed');
         $(`.${color.colorName}`).addClass('active').siblings().removeClass('active');
         $(`.${color.colorName}`).html('<i class="fas fa-check"></i>').siblings().html('');
 
@@ -160,6 +164,11 @@ function changeFontSize(level) {
 changeColor(colorDetails ? colorDetails : "");
 changeFontSize(fontSize);
 
+if (colorInverted) {
+    $('html').addClass('inverted').addClass('invert-colors');
+    $('.accessibility-settings .window .options-list .option .switch span.disabled').addClass('active').siblings().removeClass('active');
+}
+
 
 /**
  * ===========================
@@ -258,6 +267,11 @@ $('.accessibility-settings .window .options-list .option .color-changer .color')
 
     $(this).addClass('active').siblings().removeClass('active');
     $(this).html('<i class="fas fa-check"></i>').siblings().html('');
+    
+    // Remove Invert
+    window.localStorage.removeItem('ColorInverted');
+    $('html').removeClass('inverted').removeClass('invert-colors');
+    $('.accessibility-settings .window .options-list .option .switch span.enabled').addClass('active').siblings().removeClass('active');
 
     // Save The Color in The Browser
     window.localStorage.setItem('CurrentColor', JSON.stringify({
@@ -279,6 +293,18 @@ $('.accessibility-settings .window .options-list .option .color-changer .color')
  */
 $('.accessibility-settings .window .options-list .option .switch span').click(function () {
     $(this).addClass('active').siblings().removeClass('active');
+
+    if ($(this).hasClass('disabled')) {
+
+        // Save The Color in The Browser
+        window.localStorage.setItem('ColorInverted', true);
+
+        // Apply Changes!
+        $('html').addClass('inverted').addClass('invert-colors');
+    } else {
+        window.localStorage.removeItem('ColorInverted');
+        $('html').removeClass('inverted').removeClass('invert-colors');
+    }
 });
 
 /**
@@ -288,6 +314,12 @@ $('.accessibility-settings .window .options-list .option .switch span').click(fu
  */
 $('.accessibility-settings .window .options-list .option .print-page .print-doc').click(function () {
     window.print();
+});
+
+$('.mobile-bar .mobile-print').click(function () {
+    window.print();
+
+    return false;
 });
 
 /**
@@ -318,13 +350,14 @@ $('.accessibility-settings .window .action-btns .ab.reset').click(function () {
 
     // Clear All Saved Settings
     window.localStorage.clear();
+    $('html').attr('style', '').attr('class', '');
 
-    changeColor({
-        currentColor: "rgb(16, 130, 64)",
-        colorName: "green"
-    });
+    // changeColor({
+    //     currentColor: "rgb(16, 130, 64)",
+    //     colorName: "green"
+    // });
 
-    changeFontSize(1);
+    // changeFontSize(1);
 
     return false;
 });
