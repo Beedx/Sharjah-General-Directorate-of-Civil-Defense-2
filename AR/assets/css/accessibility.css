@@ -11,10 +11,6 @@
     top: 68px;
 }
 
-.large-font-size .events .block .event {
-    height: 450px;
-}
-
 @media (min-width: 1400px) {
 
     .large-font-size .tools-bar,
@@ -28,9 +24,13 @@
     }
 
     .large-font-size .contact-bar .title-head h3::after {
-        width: 85px;
-        right: -61px;
+        left: -45px;
+        width: 126px;
     }
+}
+
+.large-font-size .events .block .event {
+    height: 450px;
 }
 
 @media (min-width: 1200px) and (max-width: 1400px) {
@@ -81,14 +81,6 @@
     }
 }
 
-@media (max-width: 414px) {
-    .large-font-size .navigation-bar .tools-bar .btns .button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
 /**
   * ==========================================
   *     Small Font Size
@@ -108,107 +100,10 @@
 @media (min-width: 1400px) {
     .small-font-size .contact-bar .title-head h3::after {
         width: 315px;
-        right: -240px;
+        left: -205px;
     }
 
     .small-font-size footer .main .quick-links .title::after {
         width: 110px;
     }
-}
-
-/**
-  * ==========================================
-  *     Black & White
-  * ==========================================
-  */
-.inverted {
-    --soft-gray: #fff !important;
-    --lighter-gray: #fff !important;
-    --main-green: #000 !important;
-    --secondary-green: #000 !important;
-    --dark-green: #000 !important;
-    --caramel: #000 !important;
-    --dark-red: #000 !important;
-    --dark-gray: #000 !important;
-    --dark-blue: #000 !important;
-    --darker-blue: #000 !important;
-    --darkest-blue: #000 !important;
-    --accurate-gray: #000 !important;
-    --dark-text: #000 !important;
-    --darker-text: #000 !important;
-    --search-result: #000 !important;
-}
-
-.invert-colors img,
-.invert-colors iframe,
-.invert-colors .thumb,
-.invert-colors .happiness-meter,
-.invert-colors h1,
-.invert-colors h2,
-.invert-colors h3,
-.invert-colors h4,
-.invert-colors h5,
-.invert-colors h6,
-.invert-colors p {
-    filter: grayscale(1);
-}
-
-.invert-colors .is-svg {
-    fill: var(--black) !important;
-}
-
-.invert-colors .slider-block.partners {
-    background: var(--black);
-}
-
-.invert-colors .partners.slider-block .title-head h3 {
-    color: var(--white);
-}
-
-.invert-colors .partners.slider-block .title-head h3>a {
-    color: var(--white);
-}
-
-.invert-colors .block .icon {
-    background: var(--black);
-}
-
-.invert-colors .block .is-svg {
-    fill: var(--white) !important;
-}
-
-.invert-colors .slider-block.services .block .service:hover .icon .is-svg {
-    fill: var(--black) !important;
-}
-
-.invert-colors footer circle.is-svg {
-    fill: var(--white) !important;
-}
-
-.invert-colors footer path {
-    fill: var(--black) !important;
-}
-
-.invert-colors .home-slider {
-    background: none;
-}
-
-.invert-colors .slider-block.events {
-    background-color: var(--black);
-}
-
-.invert-colors .slider-block.events .title-head h3 {
-    color: #fff;
-}
-
-.invert-colors .slider-block.events .title-head h3>a {
-    color: #fff;
-}
-
-.invert-colors .events .block .event .hover-effect {
-    z-index: 9;
-}
-
-.invert-colors .events .block .event {
-    background: #f9f9f9;
 }
