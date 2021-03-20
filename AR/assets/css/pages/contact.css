@@ -12,4 +12,8 @@
     .contact-page .contact-form.default-form {
         background: var(--soft-gray);
     }
+
+    .contact-page .contact-bar {
+        padding: 20px 0 0;
+    }
 }
